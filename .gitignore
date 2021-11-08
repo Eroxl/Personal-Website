@@ -1,0 +1,5 @@
+# -=- My Device Specfic Ignores -=- 
+**/Icon? 
+
+# -=- Mac OS Specific Ignores -=-
+**/.DS_Store
