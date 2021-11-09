@@ -31,5 +31,13 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    'import/extensions': 0,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
