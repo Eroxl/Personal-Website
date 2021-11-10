@@ -1,2 +1,5 @@
 # -=- Node Modules Folder -=-
 **/node_modules
+
+# -=- Build Folder -=-
+**/dist/
