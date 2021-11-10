@@ -29,12 +29,17 @@ const LoginModal = () => {
         onClick={(clickEvent) => { clickEvent.stopPropagation(); }}
         role="button"
         onKeyUp={() => {}}
-        className="w-96 h-max bg-gray-50 cursor-default"
+        className="w-96 h-max bg-gray-800 cursor-default"
       >
         <h1
-          className="text-gray-800 font-black text-2xl"
+          className="text-gray-50 font-black text-2xl"
         >
           Account Menu
+        </h1>
+        <h1
+          className="text-gray-50 font-black text-md"
+        >
+          Login using Github to access extra features on the website.
         </h1>
       </div>
     </div>
