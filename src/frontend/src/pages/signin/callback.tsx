@@ -18,7 +18,6 @@ const SigninCallbackPage = () => {
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
 
     document.cookie = `githubCode=${code}; expires=${expirationDate.toUTCString()}; path=/`;
-    console.log(document.cookie);
   }
 
   return null;
