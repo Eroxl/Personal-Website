@@ -33,7 +33,7 @@ const LoginModal = () => {
         onClick={(clickEvent) => { clickEvent.stopPropagation(); }}
         role="button"
         onKeyUp={() => {}}
-        className="w-96 h-max bg-gray-800 cursor-default p-4 rounded-md"
+        className="w-11/12 sm:w-8/12 md:w-96 h-max bg-gray-800 cursor-default p-4 rounded-md"
       >
         <h1
           className="text-gray-50 font-black text-2xl"

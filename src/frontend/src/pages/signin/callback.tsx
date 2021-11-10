@@ -1,7 +1,26 @@
-import React from 'react';
+import { useRouter } from 'next/router';
 
-const MainPage = () => (
-  <div />
-);
+import { APIURL } from '../../constants/Constants';
 
-export default MainPage;
+const SigninCallbackPage = () => {
+  const route = useRouter();
+  const { code } = route.query;
+
+  if (code !== undefined) {
+    fetch(
+      `${APIURL}signup?code=${code}`,
+      {
+        method: 'POST',
+      },
+    );
+
+    const expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+
+    document.cookie = `githubCode=${code}; expires=${expirationDate.toUTCString()}; path=/`;
+  }
+
+  return null;
+};
+
+export default SigninCallbackPage;
