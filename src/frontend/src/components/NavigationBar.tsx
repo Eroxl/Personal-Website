@@ -14,7 +14,7 @@ const NavigationBar = () => (
     <a
       id="Logo Bar"
       href="/"
-      className="pl-3 flex items-center h-full w-max gap-x-3 float-left"
+      className="pl-3 flex items-center h-full w-max gap-x-3 float-left active:opacity-90"
     >
       <Image
         src={logoIcon}
@@ -37,7 +37,7 @@ const NavigationBar = () => (
       <a
         id="Marketplace Button"
         href="/marketplace/"
-        className="w-max h-full flex items-center"
+        className="w-max h-full flex items-center active:opacity-90"
       >
         <Image
           src={shopIcon}
@@ -51,7 +51,7 @@ const NavigationBar = () => (
       <button
         type="button"
         id="Menu Navigation Button"
-        className="w-max h-full flex items-center"
+        className="w-max h-full flex items-center active:opacity-90"
       >
         <Image
           src={menuIcon}
