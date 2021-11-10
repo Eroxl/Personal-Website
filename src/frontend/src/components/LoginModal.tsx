@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+import githubLogo from '../assets/github_logo.svg';
+import { ClientID } from '../constants/Constants';
 
 const LoginModal = () => {
   const [isActive, setIsActive] = useState(false);
@@ -29,7 +33,7 @@ const LoginModal = () => {
         onClick={(clickEvent) => { clickEvent.stopPropagation(); }}
         role="button"
         onKeyUp={() => {}}
-        className="w-96 h-max bg-gray-800 cursor-default"
+        className="w-96 h-max bg-gray-800 cursor-default p-4 rounded-md"
       >
         <h1
           className="text-gray-50 font-black text-2xl"
@@ -39,8 +43,13 @@ const LoginModal = () => {
         <h1
           className="text-gray-50 font-black text-md"
         >
-          Login using Github to access extra features on the website.
+          Login using github to access extra website features!
         </h1>
+        <a
+          href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
+        >
+          <Image src={githubLogo} />
+        </a>
       </div>
     </div>
   );
