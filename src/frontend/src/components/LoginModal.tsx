@@ -15,7 +15,7 @@ const LoginModal = () => {
 
   return (
     <div
-      className="bg-black bg-opacity-25 min-w-full min-h-full fixed top-0 left-0 flex justify-center items-center"
+      className="bg-black bg-opacity-10 min-w-full min-h-full fixed top-0 left-0 flex justify-center items-center"
       onClick={() => { setIsActive(false); }}
       onKeyUp={(keyboardEvent: React.KeyboardEvent) => {
         if (keyboardEvent.key === 'Escape' || keyboardEvent.key === 'Enter') {
@@ -47,8 +47,14 @@ const LoginModal = () => {
         </h1>
         <a
           href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
+          className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg"
         >
           <Image src={githubLogo} />
+          <h1
+            className="text-gray-800 font-black text-lg"
+          >
+            Sign In With Github
+          </h1>
         </a>
       </div>
     </div>
