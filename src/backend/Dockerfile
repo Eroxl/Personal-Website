@@ -4,7 +4,7 @@ WORKDIR /usr/src/
 
 # -=- Install Packages -=-
 COPY package*.json ./
-RUN npm install
+RUN yarn
 
 # -=- Copy Source Code -=-
 COPY . .
