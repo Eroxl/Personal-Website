@@ -11,10 +11,17 @@
     "eslint-plugin-import": "^2.25.3"
   },
   "scripts": {
-    "start": "next dev ./src/",
+    "start": "node .",
+    "prestart": "npm run build",
+
+    "build": "tsc",
+    "prebuild": "yarn lint",
+
+    "docker-build": "docker build -t legislature-site-backend .",
+    "docker-run": "docker run -d -p 80:8080 legislature-site-backend",
+    
     "lint": "yarn run eslint . --fix",
-    "lint:check": "yarn run eslint .",
-    "test": "echo \"TODO: Add Unit Tests\" && exit 1"
+    "lint:check": "yarn run eslint ."
   },
   "keywords": [],
   "author": "",
