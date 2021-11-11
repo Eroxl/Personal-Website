@@ -58,7 +58,7 @@ const LoginModal = () => {
           <h1
             className="text-gray-800 font-black text-lg"
           >
-            {isLoggedIn ? 'Sign In With Github' : 'Sign Out Of Github'}
+            {isLoggedIn ? 'Sign Out Of Github' : 'Sign In With Github'}
           </h1>
         </a>
       </div>
