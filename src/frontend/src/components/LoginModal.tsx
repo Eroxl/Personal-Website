@@ -49,18 +49,35 @@ const LoginModal = () => {
         >
           Login using github to access extra website features!
         </h1>
-        <a
-          // TODO: Add Logging Out
-          href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
-          className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg"
-        >
-          <Image src={githubLogo} />
-          <h1
-            className="text-gray-800 font-black text-lg"
+        {isLoggedIn ? (
+          <button
+            // FIXME: Fix this being slightly unpredictable
+            // EROXL: 10/11/2021 (dd-mm-YYYY)
+            onClick={() => { document.cookie = 'githubCode=;'; setIsLoggedIn(false); }}
+            type="button"
+            className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"
           >
-            {isLoggedIn ? 'Sign Out Of Github' : 'Sign In With Github'}
-          </h1>
-        </a>
+            <Image src={githubLogo} />
+            <h1
+              className="text-gray-800 font-black text-lg"
+            >
+              Sign Out Of Github
+            </h1>
+          </button>
+        ) : (
+          <a
+            // TODO: Add Logging Out
+            href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
+            className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"
+          >
+            <Image src={githubLogo} />
+            <h1
+              className="text-gray-800 font-black text-lg"
+            >
+              Sign In With Github
+            </h1>
+          </a>
+        )}
       </div>
     </div>
   );
