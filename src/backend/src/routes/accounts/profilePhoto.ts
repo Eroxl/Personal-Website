@@ -19,7 +19,7 @@ router.get(
     }
 
     const user = await Users.findById(code, 'accessToken');
-    if (user === undefined) {
+    if (user === null) {
       res.statusCode = 401;
       return;
     }
@@ -45,7 +45,7 @@ router.get(
         });
       })
       .catch((err) => {
-        console.log(err);
+        res.statusCode = err.toJSON().code;
       });
   },
 );
