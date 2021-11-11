@@ -5,6 +5,7 @@ import 'tailwindcss/tailwind.css';
 
 import NavigationBar from '../components/NavigationBar';
 import LoginModal from '../components/LoginModal';
+import '../styles/globals.css';
 
 function MainApp({ Component, pageProps }: AppProps) {
   return (

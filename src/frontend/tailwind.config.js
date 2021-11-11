@@ -13,11 +13,22 @@ module.exports = {
         cyan: colors.cyan,
         violet: colors.violet,
       },
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-10%)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+          },
+        },
+      },
     },
   },
   variants: {
     extend: {
       opacity: ['active'],
+      animation: ['motion-safe', 'motion-reduce'],
     },
   },
   plugins: [],

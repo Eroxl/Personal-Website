@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 import { APIURL } from '../../constants/Constants';
+import downIcon from '../../public/svgs/down_icon.svg';
 
 const HelloMessage = () => {
   const [isProgrammingState, setIsProgrammingState] = useState(true);
@@ -29,6 +31,9 @@ const HelloMessage = () => {
           <br />
           <span>I&rsquo;m currently </span>
           <a href="https://wakatime.com/@Eroxl" title={description} target="_blank" rel="noopener noreferrer" className={`underline ${isProgrammingState ? 'text-cyan-400' : 'text-violet-400'}`}>{isProgrammingState ? '<programming/>' : '<sleeping/>'}</a>
+          <a href="#aboutMessage" className="absolute bottom-0 left-1/2">
+            <Image src={downIcon} height="50" width="50" className="text-gray-800 fill-current animate-bounce" />
+          </a>
         </div>
       </div>
     </div>
