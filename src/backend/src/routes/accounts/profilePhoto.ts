@@ -19,6 +19,7 @@ router.get(
     }
 
     const user = await Users.findById(code, 'accessToken');
+    // -=- Check If The User Has Signed Up -=-
     if (user === null) {
       // ~ 404 Not Found
       res.statusCode = 404;
