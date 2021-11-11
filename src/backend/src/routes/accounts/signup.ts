@@ -15,7 +15,7 @@ router.post(
     // -=- Check If The Code Exists -=-
     if (code === undefined) {
       // ~ 400 Bad Request
-      req.statusCode = 400;
+      res.statusCode = 400;
       return;
     }
 
@@ -34,7 +34,7 @@ router.post(
     // -=- Check If It's A Valid Access Token -=-
     if (accessToken === undefined) {
       // ~ 401 Unauthorized
-      req.statusCode = 401;
+      res.statusCode = 401;
       return;
     }
 
@@ -45,7 +45,7 @@ router.post(
     });
 
     // ~ 200 Ok
-    req.statusCode = 200;
+    res.statusCode = 200;
 
     user.save(() => {
       // ~ 400 Conflict
