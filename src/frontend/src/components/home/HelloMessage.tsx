@@ -22,7 +22,7 @@ const HelloMessage = () => {
   // TODO: Support Mobile
   return (
     <div className="h-full">
-      <div className="table w-full h-screen fixed top-0 left-0">
+      <div className="px-10 table w-full h-screen absolute top-0 left-0">
         <div className="table-cell font-bold text-6xl text-center align-middle h-full text-gray-800">
           <span>Hi, I&rsquo;m </span>
           <a href="https://github.com/Eroxl" title="Github" target="_blank" rel="noopener noreferrer" className="underline text-green-400">{'<Eroxl/>'}</a>
