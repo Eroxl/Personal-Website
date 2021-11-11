@@ -3,3 +3,6 @@
 
 # -=- Build Folder -=-
 **/dist/
+
+# -=- Secrets File -=-
+**/secrets.ts
