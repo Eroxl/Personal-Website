@@ -29,7 +29,7 @@ const LoginButton = () => {
     document.dispatchEvent(activateLoginModalEvent);
   };
 
-  if (code === '') {
+  if (code === '' || profileURL === '') {
     return (
       <button
         type="button"
@@ -41,25 +41,21 @@ const LoginButton = () => {
     );
   }
 
-  if (profileURL !== '') {
-    return (
-      <button
-        type="button"
-        className="flex items-center h-full bg-transparent"
-        onClick={activateLoginModal}
-      >
-        <Image
-          src={profileURL}
-          // TODO: Add Placeholder Instead Of Returning Null
-          width={40}
-          height={40}
-          className="text-gray-800 font-black text-xl active:opacity-90 py-1 px-2 rounded-full tracking-wide"
-        />
-      </button>
-    );
-  }
-
-  return null;
+  return (
+    <button
+      type="button"
+      className="flex items-center h-full bg-transparent"
+      onClick={activateLoginModal}
+    >
+      <Image
+        src={profileURL}
+        // TODO: Add Placeholder Instead Of Returning Null
+        width={40}
+        height={40}
+        className="text-gray-800 font-black text-xl active:opacity-90 py-1 px-2 rounded-full tracking-wide"
+      />
+    </button>
+  );
 };
 
 export default LoginButton;
