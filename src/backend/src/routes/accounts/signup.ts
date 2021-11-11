@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 
+// -=- Models -=-
 import Users from '../../models/user';
 import secrets from '../../secrets';
 
@@ -11,7 +12,7 @@ router.post(
   async (req, res) => {
     const { code } = req.query;
 
-    // -=- Check If The Code Is Valid -=-
+    // -=- Check If The Code Exists -=-
     if (code === undefined) {
       // ~ 400 Bad Request
       req.statusCode = 400;
