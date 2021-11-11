@@ -11,6 +11,7 @@ function MainApp({ Component, pageProps }: AppProps) {
     <div className="bg-gray-100 font-mono">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>Eroxl&rsquo;s Personal Website</title>
       </Head>
       <NavigationBar />
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
