@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import logoIcon from '../assets/logo.png';
-import shopIcon from '../assets/svgs/store_icon.svg';
-import menuIcon from '../assets/svgs/menu_icon.svg';
+import logoIcon from '../public/logo.png';
+import shopIcon from '../public/svgs/store_icon.svg';
+import menuIcon from '../public/svgs/menu_icon.svg';
 import LoginButton from './LoginButton';
 
 const NavigationBar = () => (

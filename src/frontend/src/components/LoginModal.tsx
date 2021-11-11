@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import githubLogo from '../assets/github_logo.svg';
+import githubLogo from '../public/github_logo.svg';
 import { ClientID } from '../constants/Constants';
 
 const LoginModal = () => {
@@ -66,7 +66,6 @@ const LoginModal = () => {
           </button>
         ) : (
           <a
-            // TODO: Add Logging Out
             href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
             className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"
           >

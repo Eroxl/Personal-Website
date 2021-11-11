@@ -13,7 +13,7 @@ const SigninCallbackPage = () => {
       {
         method: 'POST',
       },
-    );
+    ).catch(() => {});
 
     const expirationDate = new Date();
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);

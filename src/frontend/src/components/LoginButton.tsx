@@ -19,7 +19,8 @@ const LoginButton = () => {
 
         fetch(`${APIURL}accounts/profile-photo?code=${cookieVal}`)
           .then((profileURLData) => profileURLData.json())
-          .then((profileURLJSON) => setProfileURL(profileURLJSON.avatarURL));
+          .then((profileURLJSON) => setProfileURL(profileURLJSON.avatarURL))
+          .catch(() => {});
       }
     }
   }, []);
