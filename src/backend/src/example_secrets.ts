@@ -1,3 +1,5 @@
 export default {
-  readAndWriteMongoCreds: ""
-}
+  readAndWriteMongoCreds: '',
+  githubClientSecrets: '',
+  githubClientID: '',
+};

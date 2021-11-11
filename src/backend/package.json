@@ -18,17 +18,19 @@
     "start": "node .",
     "prestart": "npm run build",
     "build": "tsc",
-    "prebuild": "yarn lint",
+    "prebuild": "yarn lint:check",
     "docker-build": "docker build -t portfolio-site-backend .",
     "docker-run": "docker run -d -p 80:8080 portfolio-site-backend",
-    "lint": "yarn run eslint . --fix",
-    "lint:check": "yarn run eslint ."
+    "lint": "yarn run eslint src/**/*.ts --fix",
+    "lint:check": "yarn run eslint src/**/*.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "cors": "^2.8.5"
+    "mongoose": "^6.0.12"
   }
 }

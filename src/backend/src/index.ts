@@ -1,7 +1,13 @@
 import express from 'express';
 import cors from 'cors';
+import mongoose from 'mongoose';
 
-import accounts from './accounts'
+// -=- Routes -=-
+import accounts from './routes/accounts';
+// -=- Secrets -=-
+import secrets from './secrets';
+
+mongoose.connect(secrets.readAndWriteMongoCreds);
 
 const app = express();
 const port = 8080;
@@ -9,9 +15,9 @@ const port = 8080;
 app.use(cors());
 
 app.use(
-  '/accounts/', 
-  accounts
-)
+  '/accounts/',
+  accounts,
+);
 
-// -=- Start The Express Server -=- 
+// -=- Start The Express Server -=-
 app.listen(port);

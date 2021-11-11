@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'airbnb-base',
   ],
   parser: '@typescript-eslint/parser',
