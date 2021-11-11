@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 // -=- Routes -=-
 import accounts from './routes/accounts';
 import status from './routes/status';
+import projects from './routes/projects';
 // -=- Secrets -=-
 import secrets from './secrets';
 
@@ -22,6 +23,10 @@ app.use(
 app.use(
   '/status/',
   status,
+);
+app.use(
+  '/projects/',
+  projects,
 );
 
 // -=- Start The Express Server -=-
