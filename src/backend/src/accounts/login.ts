@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get(
   '/', 
-  async (res, req) => {
+  async (req, res) => {
     
   }
 )
