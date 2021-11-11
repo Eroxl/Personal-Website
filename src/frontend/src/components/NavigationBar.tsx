@@ -62,7 +62,6 @@ const NavigationBar = () => (
           height={48}
         />
       </button>
-      {/* TODO: Login State */}
       <LoginButton />
     </div>
   </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import { APIURL } from '../constants/Constants';
+import { APIURL, GithubOAuthCodeKey } from '../constants/Constants';
 
 // FIXME: Re-Write Better
 // EROXL: 10/11/2021 (dd/mm/YYYY)
@@ -14,7 +14,7 @@ const LoginButton = () => {
     const cookies = document.cookie.split('; ');
     for (let i = 0; i < cookies.length; i += 1) {
       const [cookieKey, cookieVal] = cookies[i].split('=');
-      if (cookieKey === 'githubCode') {
+      if (cookieKey === GithubOAuthCodeKey) {
         setCode(cookieVal);
 
         fetch(`${APIURL}accounts/profile-photo?code=${cookieVal}`)

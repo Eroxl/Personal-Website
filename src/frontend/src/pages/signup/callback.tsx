@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { APIURL } from '../../constants/Constants';
+import { APIURL, GithubOAuthCodeKey } from '../../constants/Constants';
 
 const SigninCallbackPage = () => {
   const route = useRouter();
@@ -18,7 +18,7 @@ const SigninCallbackPage = () => {
     const expirationDate = new Date();
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
 
-    document.cookie = `githubCode=${code}; expires=${expirationDate.toUTCString()}; path=/`;
+    document.cookie = `${GithubOAuthCodeKey}=${code}; expires=${expirationDate.toUTCString()}; path=/`;
   }
   return null;
 };
