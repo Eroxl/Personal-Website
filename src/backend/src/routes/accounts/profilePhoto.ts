@@ -20,7 +20,8 @@ router.get(
 
     const user = await Users.findById(code, 'accessToken');
     if (user === null) {
-      res.statusCode = 401;
+      // ~ 404 Not Found
+      res.statusCode = 404;
       return;
     }
 
