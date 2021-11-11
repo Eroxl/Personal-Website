@@ -8,7 +8,7 @@ import LoginModal from '../components/LoginModal';
 
 function MainApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="bg-gray-100 font-mono">
+    <body className="bg-gray-100 font-mono flex flex-col h-screen">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Eroxl&rsquo;s Personal Website</title>
@@ -17,7 +17,7 @@ function MainApp({ Component, pageProps }: AppProps) {
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Component {...pageProps} />
       <LoginModal />
-    </div>
+    </body>
   );
 }
 

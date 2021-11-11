@@ -9,7 +9,7 @@ import LoginButton from './LoginButton';
 const NavigationBar = () => (
   <div
     id="Navigation Bar"
-    className="bg-gray-800 w-full h-16"
+    className="bg-gray-800 w-full h-16 z-50"
   >
     <a
       id="Logo Bar"
