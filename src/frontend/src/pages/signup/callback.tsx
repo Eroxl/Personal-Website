@@ -7,8 +7,9 @@ const SigninCallbackPage = () => {
   const { code } = route.query;
 
   if (code !== undefined) {
+    window.location.href = '/';
     fetch(
-      `${APIURL}signup?code=${code}`,
+      `${APIURL}accounts/signup?code=${code}`,
       {
         method: 'POST',
       },
@@ -19,7 +20,6 @@ const SigninCallbackPage = () => {
 
     document.cookie = `githubCode=${code}; expires=${expirationDate.toUTCString()}; path=/`;
   }
-
   return null;
 };
 

@@ -6,9 +6,13 @@ import { ClientID } from '../constants/Constants';
 
 const LoginModal = () => {
   const [isActive, setIsActive] = useState(false);
+  let isLoggedIn = false;
 
   useEffect(() => {
-    document.addEventListener('activateLoginModal', () => { setIsActive(true); });
+    document.addEventListener('activateLoginModal', (activateLoginModalEvent: CustomEvent) => {
+      setIsActive(true);
+      isLoggedIn = activateLoginModalEvent.detail.isLoggedIn;
+    });
   });
 
   if (!isActive) return null;
@@ -46,6 +50,7 @@ const LoginModal = () => {
           Login using github to access extra website features!
         </h1>
         <a
+          // TODO: Add Logging Out
           href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
           className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg"
         >
@@ -53,7 +58,7 @@ const LoginModal = () => {
           <h1
             className="text-gray-800 font-black text-lg"
           >
-            Sign In With Github
+            {isLoggedIn ? 'Sign In With Github' : 'Sign Out Of Github'}
           </h1>
         </a>
       </div>

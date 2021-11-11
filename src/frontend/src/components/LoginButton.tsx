@@ -7,7 +7,7 @@ const isLoggedIn = false;
 
 const LoginButton = () => {
   const activateLoginModal = () => {
-    const activateLoginModalEvent = new Event('activateLoginModal');
+    const activateLoginModalEvent = new CustomEvent('activateLoginModal', { detail: { isLoggedIn } });
     document.dispatchEvent(activateLoginModalEvent);
   };
 
