@@ -16,7 +16,7 @@ module.exports = {
       keyframes: {
         bounce: {
           '0%, 100%': {
-            transform: 'translateY(-10%)',
+            transform: 'translateY(-20%)',
           },
           '50%': {
             transform: 'translateY(0)',
@@ -28,7 +28,6 @@ module.exports = {
   variants: {
     extend: {
       opacity: ['active'],
-      animation: ['motion-safe', 'motion-reduce'],
     },
   },
   plugins: [],
