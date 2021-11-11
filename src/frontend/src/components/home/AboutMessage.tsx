@@ -3,7 +3,7 @@ import React from 'react';
 // TODO: Support Mobile
 // TODO: Convert This Whole Page Into A Custom Markdown Renderer
 const AboutMessage = () => (
-  <h1 className="font-bold">
+  <h1 className="font-bold text-gray-800">
     <h1 className="text-6xl">About</h1>
     <h1 className="text-3xl px-5">
       <h1 className="text-2xl">
@@ -37,9 +37,9 @@ const AboutMessage = () => (
       <br />
       <h1 className="text-2xl px-5">
         If you scroll back up to the top of the page you&rsquo;ll see either
-        <span title="Editing A Python File" className="underline text-cyan-400"> &lt;programming/&gt; </span>
+        <a href="#top" title="Editing A Python File" className="underline text-cyan-400"> &lt;programming/&gt; </a>
         or
-        <span title="Just Sleeping" className="underline text-violet-400"> &lt;sleeping/&gt; </span>
+        <a href="#top" title="Just Sleeping" className="underline text-violet-400"> &lt;sleeping/&gt; </a>
         if you hover over those they&rsquo;ll show a little description of my status gathered from a
         <a href="https://github.com/Eroxl/Portfolio-Website" target="_blank" rel="noopener noreferrer" className="underline text-blue-400"> vscode plugin </a>
         I coded
