@@ -6,12 +6,12 @@ import { ClientID } from '../constants/Constants';
 
 const LoginModal = () => {
   const [isActive, setIsActive] = useState(false);
-  let isLoggedIn = false;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     document.addEventListener('activateLoginModal', (activateLoginModalEvent: CustomEvent) => {
+      setIsLoggedIn(activateLoginModalEvent.detail.isLoggedIn);
       setIsActive(true);
-      isLoggedIn = activateLoginModalEvent.detail.isLoggedIn;
     });
   });
 
