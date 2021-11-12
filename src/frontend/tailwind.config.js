@@ -13,6 +13,9 @@ module.exports = {
         cyan: colors.cyan,
         violet: colors.violet,
       },
+      animation: {
+        projects: 'projects 5s ease',
+      },
       keyframes: {
         bounce: {
           '0%, 100%': {
@@ -22,12 +25,18 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
+        projects: {
+          '0%, 100%': {
+            transform: 'scale(1.03)',
+          },
+        },
       },
     },
   },
   variants: {
     extend: {
       opacity: ['active'],
+      animation: ['hover'],
     },
   },
   plugins: [],
