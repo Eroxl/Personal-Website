@@ -25,14 +25,14 @@ const HelloMessage = () => {
   return (
     <div className="h-full">
       <div className="px-10 table w-full h-screen absolute top-0 left-0">
-        <div className="table-cell font-bold text-6xl text-center align-middle h-full text-gray-800">
+        <div className="table-cell font-bold text-3xl sm:text-4xl md:text-6xl text-center align-middle h-full text-gray-800">
           <span>Hi, I&rsquo;m </span>
           <a href="https://github.com/Eroxl" title="Github" target="_blank" rel="noopener noreferrer" className="underline text-green-400">{'<Eroxl/>'}</a>
           <br />
           <span>I&rsquo;m currently </span>
           <a href="https://wakatime.com/@Eroxl" title={description} target="_blank" rel="noopener noreferrer" className={`underline ${isProgrammingState ? 'text-cyan-400' : 'text-violet-400'}`}>{isProgrammingState ? '<programming/>' : '<sleeping/>'}</a>
-          <a href="#aboutMessage" className="absolute bottom-0 left-1/2">
-            <Image src={downIcon} height="50" width="50" className="text-gray-800 fill-current animate-bounce" />
+          <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
+            <Image src={downIcon} height="48" width="48" className="text-gray-800 fill-current animate-bounce" />
           </a>
         </div>
       </div>
