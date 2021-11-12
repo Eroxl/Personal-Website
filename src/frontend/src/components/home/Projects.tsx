@@ -26,7 +26,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="font-bold text-gray-800">
-      <h1 className="text-6xl">Projects</h1>
+      <h1 className="sm:text-6xl text-5xl">Projects</h1>
       <div className="h-max flex gap-5 justify-evenly sm:justify-between flex-wrap mt-5 mx-5">
         { projects }
       </div>
