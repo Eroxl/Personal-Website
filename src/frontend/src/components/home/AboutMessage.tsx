@@ -28,22 +28,23 @@ const AboutMessage = () => (
       - Trading Text
       <br />
       <h1 className="text-2xl px-5">
-        The large store icon on the topbar will take you to the
-        <a href="/marketplace" target="_blank" rel="noopener noreferrer" className="underline text-blue-400"> marketplace </a>
-        where you can trade portions of this website with other users.
+        The large store icon on the topbar will take you to the&ensp;
+        <a href="/marketplace" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">marketplace</a>
+        &ensp;where you can trade portions of this website with other users.
       </h1>
       <br />
       - Activity Monitor
       <br />
       <h1 className="text-2xl px-5">
-        If you scroll back up to the top of the page you&rsquo;ll see either
-        <a href="#top" title="Editing A Python File" className="underline text-cyan-400"> &lt;programming/&gt; </a>
-        or
-        <a href="#top" title="Just Sleeping" className="underline text-violet-400"> &lt;sleeping/&gt; </a>
-        if you hover over those they&rsquo;ll show a little description of my status gathered from a
-        <a href="https://github.com/Eroxl/Portfolio-Website" target="_blank" rel="noopener noreferrer" className="underline text-blue-400"> vscode plugin </a>
-        I coded
-        for instance &ldquo;Editing A Python File&rdquo; or &ldquo;Just Sleeping&rdquo;
+        If you scroll back up to the top of the page you&rsquo;ll see either&ensp;
+        <a href="#top" title="Editing A Python File" className="underline text-cyan-400">&lt;programming/&gt;</a>
+        &ensp;or&ensp;
+        <a href="#top" title="Just Sleeping" className="underline text-violet-400">&lt;sleeping/&gt;</a>
+        &ensp;if you hover over those they&rsquo;ll show a little description of my status
+        &ensp;gathered from a&ensp;
+        <a href="https://github.com/Eroxl/Portfolio-Website" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">vscode plugin</a>
+        &ensp;I coded for instance &ldquo;
+        Editing A Python File&rdquo; or &ldquo;Just Sleeping&rdquo;
       </h1>
     </h1>
   </h1>
