@@ -1,10 +1,11 @@
 import express from 'express';
 import axios from 'axios';
 
-import Projects from '../../models/projects';
 import secrets from '../../secrets';
+import icons from '../../constants/icons';
 
 type projectType = {
+  id: string,
   fork: boolean,
   name: string,
   description: string,
@@ -16,45 +17,65 @@ type formattedProjectTypes = {
   name: string,
   description: string,
   homepage: string,
+  imageURL: string,
 }
 
 const router = express.Router();
 
-// TODO: Add Error Handling
 router.get(
   '/',
   async (req, res) => {
-    axios.get('https://api.github.com/user/repos', {
-      headers: {
-        Authorization: `token ${secrets.githubPersonalAccessToken}`,
-      },
-    })
-      .then((projectData) => projectData.data)
-      .then((projectJSON) => {
-        const outputRepos: formattedProjectTypes[] = [];
+    const outputRepos: Promise<formattedProjectTypes[]>[] = [];
 
-        projectJSON.forEach((element: projectType) => {
-          if (!element.fork) {
-            outputRepos.push(
-              {
-                name: element.name,
-                description: element.description,
-                homepage: element.homepage !== '' ? element.homepage : element.html_url,
-              },
-            );
+    secrets.githubPersonalAccessTokens.forEach((githubPersonalAccessToken) => {
+      const myOutputReposPromise: Promise<formattedProjectTypes[]> = new Promise(
+        (resolve, reject) => {
+          const myOutputRepos: formattedProjectTypes[] = [];
+
+          let url = '';
+          if (githubPersonalAccessToken.type === 'personal') {
+            url = 'https://api.github.com/user/repos';
+          } else {
+            url = `https://api.github.com/orgs/${githubPersonalAccessToken.name}/repos`;
           }
+          axios.get(url, {
+            headers: {
+              Authorization: `token ${githubPersonalAccessToken.key}`,
+            },
+          })
+            .then((projectData) => projectData.data)
+            .then((projectJSON) => {
+              projectJSON.forEach((element: projectType) => {
+                if (!element.fork && !element.name.startsWith('.')) {
+                  myOutputRepos.push(
+                    {
+                      name: element.name,
+                      description: element.description,
+                      homepage: element.homepage !== '' ? element.homepage : element.html_url,
+                      imageURL: icons[element.id] ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC',
+                    },
+                  );
+                }
+              });
+              resolve(myOutputRepos);
+            })
+            .catch((err) => { reject(err); });
+        },
+      );
+      outputRepos.push(myOutputReposPromise);
+    });
+
+    Promise.all(outputRepos)
+      .then((outputReposData) => {
+        const outArr: formattedProjectTypes[] = [];
+        outputReposData.forEach((outputReposDataBlock) => {
+          outputReposDataBlock.forEach((outputReposDataElement) => {
+            outArr.push(outputReposDataElement);
+          });
         });
-
-        console.log(projectJSON);
-
-        // ~ 200 Ok
-        res.statusCode = 200;
-        res.jsonp(outputRepos);
+        res.jsonp(outArr);
       })
-      .catch(() => {
-        // ~ 500 Internal Server Error
-        res.statusCode = 500;
-      });
+      .catch(() => { res.statusCode = 500; });
   },
 );
 
