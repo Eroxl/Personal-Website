@@ -1,6 +1,5 @@
 import React from 'react';
 
-// TODO: Support Mobile
 // TODO: Convert This Whole Page Into A Custom Markdown Renderer
 const AboutMessage = () => (
   <h1 className="font-bold text-gray-800">
@@ -43,8 +42,8 @@ const AboutMessage = () => (
         &ensp;if you hover over those they&rsquo;ll show a little description of my status
         &ensp;gathered from a&ensp;
         <a href="https://github.com/Eroxl/Portfolio-Website" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">vscode plugin</a>
-        &ensp;I coded for instance &ldquo;
-        Editing A Python File&rdquo; or &ldquo;Just Sleeping&rdquo;
+        &ensp;I coded for instance &ldquo;Editing A
+        Python File&rdquo; or &ldquo;Just Sleeping&rdquo;
       </h1>
     </h1>
   </h1>

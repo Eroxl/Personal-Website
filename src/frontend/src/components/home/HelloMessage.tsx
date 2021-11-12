@@ -21,7 +21,6 @@ const HelloMessage = () => {
       });
   }, []);
 
-  // TODO: Support Mobile
   return (
     <div className="h-full">
       <div className="px-10 table w-full h-screen absolute top-0 left-0">

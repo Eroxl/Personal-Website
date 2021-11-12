@@ -51,8 +51,6 @@ const LoginModal = () => {
         </h1>
         {isLoggedIn ? (
           <button
-            // FIXME: Fix this being slightly unpredictable
-            // EROXL: 10/11/2021 (dd-mm-YYYY)
             onClick={() => { document.cookie = `${GithubOAuthCodeKey}=;`; setIsLoggedIn(false); window.location.reload(); }}
             type="button"
             className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"

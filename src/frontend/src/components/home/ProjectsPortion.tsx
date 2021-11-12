@@ -8,7 +8,6 @@ interface Props {
   projectURL: string,
 }
 
-// TODO: Support Mobile
 const ProjectsPortion = (props: Props) => {
   const {
     name,
