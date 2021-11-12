@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import githubLogo from '../public/github_logo.svg';
+import githubLogo from '../public/svgs/github_logo.svg';
 import { ClientID, GithubOAuthCodeKey } from '../constants/Constants';
 
 const LoginModal = () => {
