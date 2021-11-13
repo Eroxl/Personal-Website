@@ -10,7 +10,7 @@ const MainPage = () => (
     <HelloMessage />
     <Spacer id="aboutMessage" />
     <AboutMessage />
-    <Spacer />
+    <Spacer id="projects" />
     <ProjectsPage />
     <Spacer />
   </div>
