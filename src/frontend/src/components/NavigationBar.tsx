@@ -32,7 +32,7 @@ const NavigationBar = () => {
     >
       <a
         id="Logo Bar"
-        href="/"
+        href="/#"
         className="pl-3 flex items-center h-full w-max gap-x-3 float-left active:opacity-90"
       >
         <Image
@@ -55,7 +55,7 @@ const NavigationBar = () => {
       >
         <a
           id="Marketplace Button"
-          href="/marketplace/"
+          href="/marketplace#"
           className="w-max h-full flex items-center active:opacity-90"
         >
           <Image
