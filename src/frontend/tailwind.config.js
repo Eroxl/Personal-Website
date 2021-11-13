@@ -14,7 +14,7 @@ module.exports = {
         violet: colors.violet,
       },
       animation: {
-        projects: 'projects 5s ease',
+        projects: 'projects 5s ease infinite',
       },
       keyframes: {
         bounce: {
