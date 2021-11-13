@@ -11,11 +11,9 @@ import LoginButton from './LoginButton';
 const NavigationBar = () => {
   const [isNavigationMenuActive, setIsNavigationMenuActive] = useState(false);
 
-  const navigtationMenu: React.MutableRefObject<any> = useRef(null);
-  const navigtationButton: React.MutableRefObject<any> = useRef(null);
+  const navigationMenu: React.MutableRefObject<any> = useRef(null);
   const clickHandle = (mouseEvent: Event) => {
-    if (navigtationMenu.current && !navigtationMenu.current.contains(mouseEvent.target)
-      && navigtationButton.current && !navigtationButton.current.contains(mouseEvent.target)) {
+    if (navigationMenu.current && !navigationMenu.current.contains(mouseEvent.target)) {
       setIsNavigationMenuActive(false);
     }
   };
@@ -68,32 +66,34 @@ const NavigationBar = () => {
             height={48}
           />
         </a>
-        <button
-          ref={navigtationButton}
-          type="button"
-          id="Menu Navigation Button"
-          className="w-max h-full flex items-center active:opacity-90"
-          onClick={() => { setIsNavigationMenuActive(!isNavigationMenuActive); }}
-        >
-          <Image
-            src={menuIcon}
-            id="Menu Navigation Button Icon"
-            alt="Menu Navigation Button Icon"
-            width={48}
-            height={48}
-          />
-        </button>
         <div
-          ref={navigtationMenu}
-          className={`absolute top-16 right-14 w-full bg-gray-800 text-gray-50 text-2xl sm:text-xl font-bold rounded-b-md ${isNavigationMenuActive ? '' : 'hidden'}`}
+          ref={navigationMenu}
         >
-          <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
-            <Image src={aboutIcon} />
-            <a href="/#aboutMessage" className="w-full block">About</a>
-          </div>
-          <div className="w-full flex gap-2 pl-1 active:opacity-70">
-            <Image src={projectsIcon} />
-            <a href="/#projects" className="w-full block">Projects</a>
+          <button
+            type="button"
+            id="Menu Navigation Button"
+            className="w-max h-full flex items-center active:opacity-90"
+            onClick={() => { setIsNavigationMenuActive(!isNavigationMenuActive); }}
+          >
+            <Image
+              src={menuIcon}
+              id="Menu Navigation Button Icon"
+              alt="Menu Navigation Button Icon"
+              width={48}
+              height={48}
+            />
+          </button>
+          <div
+            className={`absolute top-16 right-14 w-full bg-gray-800 text-gray-50 text-2xl sm:text-xl font-bold rounded-b-md ${isNavigationMenuActive ? '' : 'hidden'}`}
+          >
+            <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
+              <Image src={aboutIcon} />
+              <a href="/#aboutMessage" className="w-full block">About</a>
+            </div>
+            <div className="w-full flex gap-2 pl-1 active:opacity-70">
+              <Image src={projectsIcon} />
+              <a href="/#projects" className="w-full block">Projects</a>
+            </div>
           </div>
         </div>
         <LoginButton />
