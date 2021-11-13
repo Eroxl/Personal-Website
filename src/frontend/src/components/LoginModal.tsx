@@ -8,11 +8,16 @@ const LoginModal = () => {
   const [isActive, setIsActive] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const activateLoginModal = (activateLoginModalEvent: CustomEvent) => {
+    setIsLoggedIn(activateLoginModalEvent.detail.isLoggedIn);
+    setIsActive(true);
+  };
+
   useEffect(() => {
-    document.addEventListener('activateLoginModal', (activateLoginModalEvent: CustomEvent) => {
-      setIsLoggedIn(activateLoginModalEvent.detail.isLoggedIn);
-      setIsActive(true);
-    });
+    document.addEventListener('activateLoginModal', activateLoginModal);
+    return () => {
+      document.removeEventListener('activateLoginModal', activateLoginModal);
+    };
   });
 
   if (!isActive) return null;
