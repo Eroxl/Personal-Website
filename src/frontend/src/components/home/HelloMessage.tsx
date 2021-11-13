@@ -31,7 +31,7 @@ const HelloMessage = () => {
           <span>I&rsquo;m currently </span>
           <a href="https://wakatime.com/@Eroxl" title={description} target="_blank" rel="noopener noreferrer" className={`underline ${isProgrammingState ? 'text-cyan-400' : 'text-violet-400'}`}>{isProgrammingState ? '<programming/>' : '<sleeping/>'}</a>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
-            <Image src={downIcon} height="48" width="48" className="text-gray-800 fill-current animate-bounce" />
+            <Image src={downIcon} height="48" width="48" className="animate-bounce" />
           </a>
         </div>
       </div>
