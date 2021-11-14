@@ -3,6 +3,7 @@ import React from 'react';
 import HelloMessage from '../components/home/HelloMessage';
 import AboutMessage from '../components/home/AboutMessage';
 import ProjectsPage from '../components/home/Projects';
+import SigningPage from '../components/home/Signing';
 import Spacer from '../components/home/Spacer';
 
 const MainPage = () => (
@@ -12,6 +13,8 @@ const MainPage = () => (
     <AboutMessage />
     <Spacer id="projects" />
     <ProjectsPage />
+    <Spacer id="signing" />
+    <SigningPage />
     <Spacer />
   </div>
 );

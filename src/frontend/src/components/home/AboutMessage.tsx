@@ -15,21 +15,12 @@ const AboutMessage = () => (
         <br />
         <br />
       </h1>
-      - Claiming Text
+      - Signing This Page
       <br />
       <h1 className="sm:text-2xl text-xl sm:px-5 px-0 pl-5">
-        You&rsquo;ll notice small icons in the bottom left of most of the text on this page. If you
-        sign in with github those will switch to a small green + sign (or at least the ones that
-        haven&rsquo;t already been claimed) you can then press the plus button to add that text to
-        your account your profile photo will be placed besides the text for all users.
-      </h1>
-      <br />
-      - Trading Text
-      <br />
-      <h1 className="sm:text-2xl text-xl sm:px-5 px-0 pl-5">
-        The large store icon on the topbar will take you to the&ensp;
-        <a href="/marketplace" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">marketplace</a>
-        &ensp;where you can trade portions of this website with other users.
+        If you scroll down to the button while your logged in you&rsquo; be able to sign this
+        website by following the instructions at the bottom. This will add your profile picture
+        to the footer forever.
       </h1>
       <br />
       - Activity Monitor

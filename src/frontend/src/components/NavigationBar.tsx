@@ -6,6 +6,7 @@ import shopIcon from '../public/svgs/store_icon.svg';
 import menuIcon from '../public/svgs/menu_icon.svg';
 import aboutIcon from '../public/svgs/about_icon.svg';
 import projectsIcon from '../public/svgs/projects_icon.svg';
+import signingIcon from '../public/svgs/signing_icon.svg';
 import LoginButton from './LoginButton';
 
 const NavigationBar = () => {
@@ -53,19 +54,6 @@ const NavigationBar = () => {
       <div
         className="pr-3 flex items-center h-full w-max gap-x-3 float-right relative"
       >
-        <a
-          id="Marketplace Button"
-          href="/marketplace#"
-          className="w-max h-full flex items-center active:opacity-90"
-        >
-          <Image
-            src={shopIcon}
-            id="Marketplace Button Icon"
-            alt="Marketplace Button Icon"
-            width={48}
-            height={48}
-          />
-        </a>
         <div
           ref={navigationMenu}
         >
@@ -84,7 +72,7 @@ const NavigationBar = () => {
             />
           </button>
           <div
-            className={`absolute top-16 right-14 w-full bg-gray-800 text-gray-50 text-2xl sm:text-xl font-bold rounded-b-md ${isNavigationMenuActive ? '' : 'hidden'}`}
+            className={`absolute top-16 right-14 w-max bg-gray-800 text-gray-50 text-2xl sm:text-xl font-bold rounded-b-md ${isNavigationMenuActive ? '' : 'hidden'}`}
           >
             <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
               <Image src={aboutIcon} />
@@ -93,6 +81,10 @@ const NavigationBar = () => {
             <div className="w-full flex gap-2 pl-1 active:opacity-70">
               <Image src={projectsIcon} />
               <a href="/#projects" className="w-full block">Projects</a>
+            </div>
+            <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
+              <Image src={signingIcon} />
+              <a href="/#signing" className="w-full block">Signing</a>
             </div>
           </div>
         </div>
