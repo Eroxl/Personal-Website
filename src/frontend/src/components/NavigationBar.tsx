@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 import logoIcon from '../public/logo.png';
-import shopIcon from '../public/svgs/store_icon.svg';
 import menuIcon from '../public/svgs/menu_icon.svg';
 import aboutIcon from '../public/svgs/about_icon.svg';
 import projectsIcon from '../public/svgs/projects_icon.svg';

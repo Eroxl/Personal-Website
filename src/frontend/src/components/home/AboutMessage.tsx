@@ -18,8 +18,8 @@ const AboutMessage = () => (
       - Signing This Page
       <br />
       <h1 className="sm:text-2xl text-xl sm:px-5 px-0 pl-5">
-        If you scroll down to the button while your logged in you&rsquo; be able to sign this
-        website by following the instructions at the bottom. This will add your profile picture
+        If you scroll down to the bottom while you&rsquo;re logged in you&rsquo;ll be able to sign
+        this website by following the instructions at the bottom. This will add your profile picture
         to the footer forever.
       </h1>
       <br />
