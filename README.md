@@ -6,10 +6,10 @@
 Eroxl's Personal Website
 </h1>
 
-## - About
+## About
 This is my personal website to show off projects I've created and test out ideas I want to test.
 
-## - Features
+## Features
 * Dynamically generated projects page
   * All the projects are dynamically gathered from my github page
 * Page Signing
@@ -18,7 +18,7 @@ This is my personal website to show off projects I've created and test out ideas
   * A full account system done with firebase authentication and the Github OAuth API
 
 
-## - Screenshots
+## Screenshots
 #### The main landing page of the website
 ![Main Page Screenshot](./images/Landing%20Page.png)
 
@@ -28,7 +28,7 @@ This is my personal website to show off projects I've created and test out ideas
 #### The projects section of the website
 ![Projects Page Screenshot](./images/Projects%20Page.png)
 
-## - Frameworks / Tools Used
+## Frameworks / Tools Used
 * Frontend
   * Functionality
     * [React JS](https://reactjs.org/)
@@ -50,6 +50,6 @@ This is my personal website to show off projects I've created and test out ideas
   * [Firebase Authentication](https://firebase.google.com/docs/auth/)
   * [Github OAuth & REST API](https://docs.github.com/en/rest)
 
-## - Planned Features
+## Planned Features
 1. Proper Backend Documentation
    * Create proper backend documentation for the REST API
