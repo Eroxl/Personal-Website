@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import logoIcon from '../public/logo.png';
 import menuIcon from '../public/svgs/menu_icon.svg';
+import closeIcon from '../public/svgs/close_icon.svg';
 import LoginButton from './LoginButton';
 import NavigationSidebar from './NavigationSidebar';
 
@@ -61,9 +62,10 @@ const NavigationBar = () => {
             onClick={() => { setIsNavigationMenuActive(!isNavigationMenuActive); }}
           >
             <Image
-              src={menuIcon}
+              src={isNavigationMenuActive ? closeIcon : menuIcon}
               id="Menu Navigation Button Icon"
               alt="Menu Navigation Button Icon"
+              className="transition duration-500"
               width={48}
               height={48}
             />
