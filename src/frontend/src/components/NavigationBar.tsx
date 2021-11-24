@@ -3,10 +3,8 @@ import Image from 'next/image';
 
 import logoIcon from '../public/logo.png';
 import menuIcon from '../public/svgs/menu_icon.svg';
-import aboutIcon from '../public/svgs/about_icon.svg';
-import projectsIcon from '../public/svgs/projects_icon.svg';
-import signingIcon from '../public/svgs/signing_icon.svg';
 import LoginButton from './LoginButton';
+import NavigationSidebar from './NavigationSidebar';
 
 const NavigationBar = () => {
   const [isNavigationMenuActive, setIsNavigationMenuActive] = useState(false);
@@ -70,22 +68,7 @@ const NavigationBar = () => {
               height={48}
             />
           </button>
-          <div
-            className={`absolute top-16 right-14 w-max bg-gray-800 text-gray-50 text-2xl sm:text-xl font-bold rounded-b-md ${isNavigationMenuActive ? '' : 'hidden'}`}
-          >
-            <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
-              <Image src={aboutIcon} />
-              <a href="/#aboutMessage" className="w-full block">About</a>
-            </div>
-            <div className="w-full flex gap-2 pl-1 active:opacity-70">
-              <Image src={projectsIcon} />
-              <a href="/#projects" className="w-full block">Projects</a>
-            </div>
-            <div className="w-full flex gap-2 pl-1 bg-gray-900 active:opacity-70">
-              <Image src={signingIcon} />
-              <a href="/#signing" className="w-full block">Signing</a>
-            </div>
-          </div>
+          <NavigationSidebar isActive={isNavigationMenuActive} />
         </div>
         <LoginButton />
       </div>
