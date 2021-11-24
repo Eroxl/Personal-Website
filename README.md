@@ -53,3 +53,5 @@ This is my personal website to show off projects I've created and test out ideas
 ## Planned Features
 1. Proper Backend Documentation
    * Create proper backend documentation for the REST API
+2. Dark / Light Mode Toggle
+   * Add a dark and light mode toggle to the website
