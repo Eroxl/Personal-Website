@@ -19,7 +19,7 @@ const ProjectsPortion = (props: Props) => {
   return (
     <a
       href={projectURL}
-      className="w-full lg:w-5/12 h-auto bg-gray-800 rounded p-5 text-gray-50 hover:animate-projects"
+      className="w-full lg:w-5/12 h-auto bg-gray-800 rounded sm:p-5 p-3 text-gray-50 hover:animate-projects"
       target="_blank"
       rel="noopener noreferrer"
     >
