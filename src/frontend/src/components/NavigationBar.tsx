@@ -4,7 +4,7 @@ import Image from 'next/image';
 import logoIcon from '../public/logo.png';
 import menuIcon from '../public/svgs/menu_icon.svg';
 import closeIcon from '../public/svgs/close_icon.svg';
-import LoginButton from './LoginButton';
+// import LoginButton from './LoginButton';
 import NavigationSidebar from './NavigationSidebar';
 
 const NavigationBar = () => {
@@ -72,7 +72,7 @@ const NavigationBar = () => {
           </button>
           <NavigationSidebar isActive={isNavigationMenuActive} />
         </div>
-        <LoginButton />
+        {/* <LoginButton /> */}
       </div>
     </div>
   );

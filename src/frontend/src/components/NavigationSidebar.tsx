@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import aboutIcon from '../public/svgs/about_icon.svg';
 import projectsIcon from '../public/svgs/projects_icon.svg';
-import signingIcon from '../public/svgs/signing_icon.svg';
+// import signingIcon from '../public/svgs/signing_icon.svg';
 
 interface Props {
   isActive: boolean
@@ -22,10 +22,10 @@ const NavigationSidebar = (props: Props) => {
         <Image src={projectsIcon} />
         <a href="/#projects" className="w-10/12">Projects</a>
       </div>
-      <div className="flex align-middle w-full flex-row active:opacity-70 p-1 gap-2">
+      {/* <div className="flex align-middle w-full flex-row active:opacity-70 p-1 gap-2">
         <Image src={signingIcon} />
         <a href="/#signing" className="w-10/12">Signing</a>
-      </div>
+      </div> */}
     </div>
   );
 };

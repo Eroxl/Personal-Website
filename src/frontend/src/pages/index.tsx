@@ -14,8 +14,8 @@ const MainPage = () => (
     <Spacer id="projects" />
     <ProjectsPage />
     <Spacer id="signing" />
-    <SigningPage />
-    <Spacer />
+    {/* <SigningPage />
+    <Spacer /> */}
   </div>
 );
 
