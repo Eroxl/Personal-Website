@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import ProjectsPortion from './ProjectsPortion';
-import { APIURL } from '../../constants/Constants';
 
-const ProjectsPage = () => {
-  const [projectsList, setProjectsList] = useState([]);
-
-  useEffect(() => {
-    fetch(`${APIURL}projects`)
-      .then((projectsListData) => projectsListData.json())
-      .then((projectsListJSON) => setProjectsList(projectsListJSON));
-  }, []);
+const ProjectsPage = (props: { projectsJSON: any[] }) => {
+  const { projectsJSON } = props;
 
   const projects: any[] = [];
-  projectsList.forEach((project: any) => {
+  projectsJSON.forEach((project: any) => {
     projects.push(
       <ProjectsPortion
         name={project.name}
