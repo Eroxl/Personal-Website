@@ -10,8 +10,8 @@ const ProjectsPage = (props: { projectsJSON: any[] }) => {
       <h1 className="sm:text-6xl text-5xl">Projects</h1>
       <div className="h-max flex gap-5 justify-evenly sm:justify-between flex-wrap mt-5 mx-5">
         {
-          Array.prototype.map(
-            (project: any, _) => (
+          projectsJSON.map(
+            (project: any) => (
               <ProjectsPortion
                 name={project.name}
                 description={project.description}
@@ -19,7 +19,6 @@ const ProjectsPage = (props: { projectsJSON: any[] }) => {
                 projectURL={project.homepage}
               />
             ),
-            projectsJSON,
           )
         }
       </div>
