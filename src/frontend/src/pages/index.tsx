@@ -10,7 +10,7 @@ import { APIURL } from '../constants/Constants';
 
 const MainPage = (props: { projectsJSON: any[] }) => {
   const { projectsJSON } = props;
-  return(
+  return (
     <div className="bg-gray-100 h-full px-10">
       <HelloMessage />
       <Spacer id="aboutMessage" />
@@ -21,7 +21,7 @@ const MainPage = (props: { projectsJSON: any[] }) => {
       {/* <SigningPage />
       <Spacer /> */}
     </div>
-  )
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
