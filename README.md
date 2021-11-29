@@ -12,11 +12,6 @@ This is my personal website to show off projects I've created and test out ideas
 ## Features
 * Dynamically generated projects page
   * All the projects are dynamically gathered from my github page
-* Page Signing
-  * Sign the footer of the page to add your github icon to the footer forever
-* Login & Accounts
-  * A full account system done with firebase authentication and the Github OAuth API
-
 
 ## Screenshots
 #### The main landing page of the website
@@ -51,7 +46,9 @@ This is my personal website to show off projects I've created and test out ideas
   * [Github OAuth & REST API](https://docs.github.com/en/rest)
 
 ## Planned Features
-1. Proper Backend Documentation
+1. Accounts
+   * Create a login / logout system using github
+2. Proper Backend Documentation
    * Create proper backend documentation for the REST API
-2. Dark / Light Mode Toggle
+3. Dark / Light Mode Toggle
    * Add a dark and light mode toggle to the website
