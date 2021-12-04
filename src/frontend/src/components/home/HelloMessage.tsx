@@ -20,7 +20,7 @@ const HelloMessage = (
           <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`${Math.round(+codeTimeJSON.data.total_seconds_including_other_language / 3600)} hours`}</a>
           <span> since August 2021</span>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
-            <Image src={downIcon} height="48" width="48" className="animate-bounce" />
+            <Image src={downIcon} height="48" width="48" className="animate-bounce" alt="Down Arrow Button" />
           </a>
         </div>
       </div>

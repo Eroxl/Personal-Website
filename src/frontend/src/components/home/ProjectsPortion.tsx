@@ -25,7 +25,7 @@ const ProjectsPortion = (props: Props) => {
       rel="noopener noreferrer"
     >
       <div className="pb-2s">
-        <Image src={imageURL} width="1280" height="640" className="rounded-sm object-cover " />
+        <Image src={imageURL} width="1280" height="640" className="rounded-sm object-cover " alt={`Projects Tab For ${name}`} />
       </div>
       <h1 className="text-xl group-hover:underline">{name.replace(new RegExp('-', 'g'), ' ')}</h1>
       <h1 className="text-sm">{description}</h1>

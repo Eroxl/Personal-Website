@@ -53,6 +53,7 @@ const LoginButton = () => {
         width={40}
         height={40}
         className="text-gray-800 font-black text-xl active:opacity-90 py-1 px-2 rounded-full tracking-wide"
+        alt="Profile Image"
       />
     </button>
   );

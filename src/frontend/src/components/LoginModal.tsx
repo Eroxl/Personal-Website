@@ -60,7 +60,7 @@ const LoginModal = () => {
             type="button"
             className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"
           >
-            <Image src={githubLogo} />
+            <Image src={githubLogo} alt="Github Logo" />
             <h1
               className="text-gray-800 font-black text-lg"
             >
@@ -72,7 +72,7 @@ const LoginModal = () => {
             href={`https://github.com/login/oauth/authorize/?client_id=${ClientID}`}
             className="bg-gray-50 h-max p-2 flex items-center mt-2 gap-x-3 rounded-lg w-full"
           >
-            <Image src={githubLogo} />
+            <Image src={githubLogo} alt="Github Logo" />
             <h1
               className="text-gray-800 font-black text-lg"
             >
