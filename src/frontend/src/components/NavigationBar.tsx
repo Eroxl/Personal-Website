@@ -46,7 +46,7 @@ const NavigationBar = () => {
           id="Logo Text"
           className="text-gray-50 font-black text-xl"
         >
-          Eroxl
+          {'</Eroxl>'}
         </h1>
       </a>
       <div
