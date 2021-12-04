@@ -17,7 +17,7 @@ const HelloMessage = (
           <a href="https://github.com/Eroxl" title="Github" target="_blank" rel="noopener noreferrer" className="underline text-green-400">{'<Eroxl/>'}</a>
           <br />
           <span>I&rsquo;ve coded over </span>
-          <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`<${Math.round(+codeTimeJSON.data.total_seconds_including_other_language / 360)} hrs/>`}</a>
+          <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`<${Math.round(+codeTimeJSON.data.total_seconds_including_other_language / 3600)} hrs/>`}</a>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
             <Image src={downIcon} height="48" width="48" className="animate-bounce" />
           </a>
