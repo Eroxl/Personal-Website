@@ -17,7 +17,7 @@
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "autoprefixer": "^10.4.0",
-    "eslint": "^8.2.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -27,10 +27,10 @@
   "license": " GPL-2.0-or-later",
   "dependencies": {
     "next": "^12.0.3",
+    "postcss": "^8.3.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.4.4",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
   }
 }
