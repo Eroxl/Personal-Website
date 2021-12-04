@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Html, Head } from 'next/document';
 import { AppProps } from 'next/app';
 import 'tailwindcss/tailwind.css';
 
@@ -9,7 +9,7 @@ import '../styles/globals.css';
 
 function MainApp({ Component, pageProps }: AppProps) {
   return (
-    <body className="bg-gray-100 font-mono flex flex-col h-screen">
+    <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Eroxl&rsquo;s Personal Website</title>
@@ -29,11 +29,13 @@ function MainApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content="My personal website for testing out ideas and sharing projects im working on" />
         <meta name="twitter:image" content="/logo.png" />
       </Head>
-      <NavigationBar />
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <Component {...pageProps} />
-      <LoginModal />
-    </body>
+      <body className="bg-gray-100 font-mono flex flex-col h-screen">
+        <NavigationBar />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+        <LoginModal />
+      </body>
+    </Html>
   );
 }
 
