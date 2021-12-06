@@ -1,3 +1,26 @@
 html {
   scroll-behavior: smooth;
 }
+
+.mainMarkdownContent h1 {
+  @apply sm:text-5xl text-4xl text-gray-800 font-black
+}
+.mainMarkdownContent h2 {
+  @apply sm:text-4xl text-3xl text-gray-800 font-extrabold
+}
+.mainMarkdownContent h3 {
+  @apply sm:text-3xl text-2xl text-gray-800 font-bold
+}
+.mainMarkdownContent h4 {
+  @apply sm:text-2xl text-xl text-gray-800 font-bold
+}
+.mainMarkdownContent h5 {
+  @apply sm:text-xl text-lg text-gray-800 font-bold
+}
+.mainMarkdownContent h6 {
+  @apply sm:text-xl text-lg text-gray-600 font-bold
+}
+
+.mainMarkdownContent p {
+  @apply sm:text-lg text-base text-gray-600 font-semibold
+}
