@@ -52,6 +52,7 @@ const NavigationBar = () => {
       <div
         className="pr-3 flex items-center h-full w-max gap-x-3 float-right relative"
       >
+        <a href="/blog" className="text-gray-50 font-black text-lg">Blog</a>
         <div
           ref={navigationMenu}
         >

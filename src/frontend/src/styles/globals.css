@@ -3,24 +3,28 @@ html {
 }
 
 .mainMarkdownContent h1 {
-  @apply sm:text-5xl text-4xl text-gray-800 font-black
+  @apply sm:text-5xl text-4xl text-gray-800 font-black ml-0
 }
 .mainMarkdownContent h2 {
-  @apply sm:text-4xl text-3xl text-gray-800 font-extrabold
+  @apply sm:text-4xl text-3xl text-gray-800 font-extrabold ml-2
 }
 .mainMarkdownContent h3 {
-  @apply sm:text-3xl text-2xl text-gray-800 font-bold
+  @apply sm:text-3xl text-2xl text-gray-800 font-bold ml-4
 }
 .mainMarkdownContent h4 {
-  @apply sm:text-2xl text-xl text-gray-800 font-bold
+  @apply sm:text-2xl text-xl text-gray-800 font-bold ml-6
 }
 .mainMarkdownContent h5 {
-  @apply sm:text-xl text-lg text-gray-800 font-bold
+  @apply sm:text-xl text-lg text-gray-800 font-bold ml-8
 }
 .mainMarkdownContent h6 {
-  @apply sm:text-xl text-lg text-gray-600 font-bold
+  @apply sm:text-xl text-lg text-gray-600 font-bold ml-10
 }
 
 .mainMarkdownContent p {
-  @apply sm:text-lg text-base text-gray-600 font-semibold
+  @apply sm:text-lg text-base text-gray-600 font-semibold ml-12
+}
+
+.mainMarkdownContent a {
+  @apply sm:text-lg text-base text-green-500 font-semibold underline
 }

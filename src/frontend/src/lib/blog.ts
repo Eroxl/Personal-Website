@@ -10,13 +10,22 @@ export const getBlogPostByName = (name: string) => {
   const markdownData = fs.readFileSync(path, 'utf8');
   const { data, content } = matter(markdownData);
 
-  return { data: { ...data, name, date: data.date}, content };
+  return {
+    data: {
+      ...data,
+      name,
+      ISODate: new Date(data.date).toISOString(),
+      date: data.date,
+    },
+    content,
+  };
 };
 
 export const getAllBlogPosts = () => {
   const posts = fs.readdirSync(blogPostsDirectory);
   // Date Formatted Like yyyy.mm.dd
   const allPosts = posts
+    .filter((post) => post !== '.obsidian')
     .map((post) => getBlogPostByName(post.replace('.md', '')).data)
     .sort(
       (firstPost, secondPost) => (

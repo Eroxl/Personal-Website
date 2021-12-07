@@ -5,7 +5,7 @@ import ProjectsPortion from '../../components/home/ProjectsPortion';
 import { getAllBlogPosts } from '../../lib/blog';
 
 const BlogPage = (
-  props: {posts: {name: string, title: string, description: string, imageURL: string}[]}
+  props: {posts: {name: string, title: string, description: string, imageURL: string}[]},
 ) => {
   const { posts } = props;
 
@@ -26,7 +26,7 @@ const BlogPage = (
                   name={post.title}
                   description={post.description}
                   imageURL={post.imageURL}
-                  projectURL={`/blog/${post.name.replace(/\s/g, '-')}`}
+                  projectURL={`/blog/${post.name.replace(/\s/g, '-')}`.toLowerCase()}
                 />
               ),
             )
