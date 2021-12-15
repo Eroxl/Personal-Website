@@ -32,7 +32,7 @@ const NavigationBar = () => {
         href="/#"
         className="pl-3 flex items-center h-full w-max gap-x-3 float-left active:opacity-90"
       >
-        <img src='/logo.svg' id="Logo" alt="Eroxl's Logo"/>
+        <img src='/logo.svg' className="w-12 h-12" id="Logo" alt="Eroxl's Logo"/>
         <h1
           id="Logo Text"
           className="text-gray-50 font-black text-xl"
@@ -43,7 +43,7 @@ const NavigationBar = () => {
       <div
         className="pr-3 flex items-center h-full w-max gap-x-3 float-right relative"
       >
-        <a href="/blog" className="text-gray-50 font-black text-lg">Blog</a>
+        <a href="/blog.html" className="text-gray-50 font-black text-lg">Blog</a>
         <div
           ref={navigationMenu}
         >
@@ -56,9 +56,7 @@ const NavigationBar = () => {
             <img src={isNavigationMenuActive ? '/svgs/close_icon.svg' : '/svgs/menu_icon.svg'}
               id="Menu Navigation Button Icon"
               alt="Menu Navigation Button Icon"
-              className="transition duration-500"
-              width={48}
-              height={48}
+              className="transition duration-500 w-12 h-12"
             />
           </button>
           <NavigationSidebar isActive={isNavigationMenuActive} />
