@@ -3,3 +3,9 @@
 
 # -=- Mac OS Specific Ignores -=-
 **/.DS_Store
+
+# -=- Secrets File -=-
+**/secrets.*
+
+# -=- Main Ignors -=-
+/node_modules
