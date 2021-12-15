@@ -24,23 +24,15 @@ This is my personal website to show off projects I've created and test out ideas
 ![Projects Page Screenshot](./images/Projects%20Page.png)
 
 ## Frameworks / Tools Used
-* Frontend
-  * Functionality
-    * [React JS](https://reactjs.org/)
-    * [Next JS](https://nextjs.org/)
-    * [Typescript](https://www.typescriptlang.org/)
-  * Style
-    * [Tailwind CSS](https://tailwindcss.com/)
-    * [Google Material Icons](https://fonts.google.com/icons?selected=Material+Icons:beenhere)
-  * Linter
-    * [ESLint](https://eslint.org/)
-* Backend
-  * Main Server
-    * [Docker](https://www.docker.com/)
-    * [Express JS](https://expressjs.com/)
-    * [Typescript](https://www.typescriptlang.org/)
-  * Linter
-    * [ESLint](https://eslint.org/)
+* Functionality
+  * [React JS](https://reactjs.org/)
+  * [Next JS](https://nextjs.org/)
+  * [Typescript](https://www.typescriptlang.org/)
+* Style
+  * [Tailwind CSS](https://tailwindcss.com/)
+  * [Google Material Icons](https://fonts.google.com/icons?selected=Material+Icons:beenhere)
+* Linter
+  * [ESLint](https://eslint.org/)
 
 ## Planned Features
 1. Dark / Light Mode Toggle
