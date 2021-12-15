@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/frontend/src/public/logo.png" height=200 />
+  <img src="./src/frontend/src/images/logo.png" height=200 />
 </p>
 
 <h1 align="center">
@@ -41,14 +41,7 @@ This is my personal website to show off projects I've created and test out ideas
     * [Typescript](https://www.typescriptlang.org/)
   * Linter
     * [ESLint](https://eslint.org/)
-* Login / OAuth
-  * [Firebase Authentication](https://firebase.google.com/docs/auth/)
-  * [Github OAuth & REST API](https://docs.github.com/en/rest)
 
 ## Planned Features
-1. Accounts
-   * Create a login / logout system using github
-2. Proper Backend Documentation
-   * Create proper backend documentation for the REST API
-3. Dark / Light Mode Toggle
+1. Dark / Light Mode Toggle
    * Add a dark and light mode toggle to the website

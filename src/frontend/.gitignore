@@ -1,8 +1,0 @@
-# -=- Node Modules Folder -=-
-**/node_modules
-
-# -=- Un Necesary Next JS Cache -=-
-**/.next
-
-# -=- Obsidian Cache (software for writing markdown) -=-
-**/.obsidian

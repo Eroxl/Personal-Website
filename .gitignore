@@ -8,4 +8,7 @@
 **/secrets.*
 
 # -=- Main Ignors -=-
+**/.next
 /node_modules
+/src/src
+**/.obsidian

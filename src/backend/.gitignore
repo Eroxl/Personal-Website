@@ -1,8 +1,0 @@
-# -=- Node Modules Folder -=-
-**/node_modules
-
-# -=- Build Folder -=-
-**/dist/
-
-# -=- Secrets File -=-
-**/secrets.ts
