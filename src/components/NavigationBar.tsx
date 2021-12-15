@@ -3,9 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-import logoIcon from '../images/logo.svg';
-import menuIcon from '../images/svgs/menu_icon.svg';
-import closeIcon from '../images/svgs/close_icon.svg';
 import NavigationSidebar from './NavigationSidebar';
 
 const NavigationBar = () => {
@@ -35,7 +32,7 @@ const NavigationBar = () => {
         href="/#"
         className="pl-3 flex items-center h-full w-max gap-x-3 float-left active:opacity-90"
       >
-        <img src={logoIcon} id="Logo" alt="Eroxl's Logo"/>
+        <img src='/logo.svg' id="Logo" alt="Eroxl's Logo"/>
         <h1
           id="Logo Text"
           className="text-gray-50 font-black text-xl"
@@ -56,7 +53,7 @@ const NavigationBar = () => {
             className="w-max h-full flex items-center active:opacity-90"
             onClick={() => { setIsNavigationMenuActive(!isNavigationMenuActive); }}
           >
-            <img src={isNavigationMenuActive ? closeIcon : menuIcon}
+            <img src={isNavigationMenuActive ? '/svgs/close_icon.svg' : '/svgs/menu_icon.svg'}
               id="Menu Navigation Button Icon"
               alt="Menu Navigation Button Icon"
               className="transition duration-500"
