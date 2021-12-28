@@ -1,12 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
-import Image from 'next/image';
-
-import downIcon from '../../images/svgs/down_icon.svg';
 
 const HelloMessage = (
-  // eslint-disable-next-line camelcase
   props: { time: string },
 ) => {
   const { time } = props;
@@ -22,7 +16,14 @@ const HelloMessage = (
           <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`${time} hours`}</a>
           <span> since August 2021</span>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
-            <img src='/svgs/down_icon.svg' className="animate-bounce w-12 h-12" alt="Down Arrow Button" />
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              enableBackground="new 0 0 24 24" 
+              height="24px" 
+              viewBox="0 0 24 24" 
+              width="24px"
+              className="animate-bounce w-12 h-12 fill-current text-gray-800"
+            ><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="18,6.41 16.59,5 12,9.58 7.41,5 6,6.41 12,12.41"/><polygon points="18,13 16.59,11.59 12,16.17 7.41,11.59 6,13 12,19"/></g></g></svg>
           </a>
         </div>
       </div>
