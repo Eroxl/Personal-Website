@@ -2,6 +2,7 @@ export interface githubAccessToken {
   type: string,
   name: string,
   key: string,
+  contrib: boolean,
 }
 
 export interface projectType {
@@ -19,4 +20,5 @@ export interface formattedProjectTypes {
   description: string,
   homepage: string,
   imageURL: string,
+  contrib: boolean,
 }

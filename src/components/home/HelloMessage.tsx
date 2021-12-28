@@ -7,9 +7,9 @@ import downIcon from '../../images/svgs/down_icon.svg';
 
 const HelloMessage = (
   // eslint-disable-next-line camelcase
-  props: { codeTimeJSON: {data: {total_seconds_including_other_language: string}} },
+  props: { time: string },
 ) => {
-  const { codeTimeJSON } = props;
+  const { time } = props;
 
   return (
     <div className="h-full">
@@ -19,7 +19,7 @@ const HelloMessage = (
           <a href="https://github.com/Eroxl" title="Github" target="_blank" rel="noopener noreferrer" className="underline text-green-400">Eroxl</a>
           <br />
           <span>I&rsquo;ve coded over </span>
-          <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`${Math.round(+codeTimeJSON.data.total_seconds_including_other_language / 3600)} hours`}</a>
+          <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`${time} hours`}</a>
           <span> since August 2021</span>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
             <img src='/svgs/down_icon.svg' className="animate-bounce w-12 h-12" alt="Down Arrow Button" />
