@@ -23,6 +23,10 @@ const NavigationSidebar = (props: Props) => {
         <img src='/svgs/group_icon.svg' alt="Projects Icon" />
         <a href="/#contributions" className="w-10/12">Contributions</a>
       </div>
+      <div className="flex align-middle w-full flex-row active:opacity-70 p-1 gap-2">
+        <img src='/svgs/work_icon.svg' alt="Projects Icon" />
+        <a href="/#work" className="w-10/12">Work</a>
+      </div>
     </div>
   );
 };

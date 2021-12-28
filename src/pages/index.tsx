@@ -4,6 +4,7 @@ import { GetStaticProps } from 'next';
 import HelloMessage from '../components/home/HelloMessage';
 import AboutMessage from '../components/home/AboutMessage';
 import ProjectsPage from '../components/home/Projects';
+import WorkPage from '../components/home/WorkPage';
 import Spacer from '../components/home/Spacer';
 import { getProjects, getContributions } from '../lib/projects/projects';
 
@@ -24,6 +25,8 @@ const MainPage = (
       <ProjectsPage projectsJSON={projectsJSON} name="Projects" />
       <Spacer id="contributions" />
       <ProjectsPage projectsJSON={contributionsJSON} name="Contributions" />
+      <Spacer id="work" />
+      <WorkPage />
       <Spacer />
     </div>
   );
