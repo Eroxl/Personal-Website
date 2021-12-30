@@ -10,7 +10,7 @@ const NavigationSidebar = (props: Props) => {
   const { isActive } = props;
 
   return (
-    <div className={`fixed w-52 h-screen bg-gray-800 text-gray-50 p-3 ${isActive ? 'right-0' : '-right-52'} top-16 text-lg font-black duration-200 transition-all ease-in-out`}>
+    <div className={`fixed w-52 h-screen bg-gray-800 dark:bg-gray-50 text-gray-50 dark:text-gray-800 p-3 ${isActive ? 'right-0' : '-right-52'} top-16 text-lg font-black duration-200 transition-all ease-in-out`}>
       <div className="flex align-middle w-full flex-row active:opacity-70 p-1 gap-2">
         <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
         <a href="/#aboutMessage" className="w-10/12">About</a>
