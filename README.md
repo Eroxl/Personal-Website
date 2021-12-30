@@ -33,7 +33,3 @@ This is my personal website to show off projects I've created and test out ideas
   * [Google Material Icons](https://fonts.google.com/icons?selected=Material+Icons:beenhere)
 * Linter
   * [ESLint](https://eslint.org/)
-
-## Planned Features
-1. Dark / Light Mode Toggle
-   * Add a dark and light mode toggle to the website
