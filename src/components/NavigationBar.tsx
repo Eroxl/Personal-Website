@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import NavigationSidebar from './NavigationSidebar';
+import ThemeToggle from './ThemeToggle';
 
 const NavigationBar = () => {
   const [isNavigationMenuActive, setIsNavigationMenuActive] = useState(false);
@@ -42,6 +43,7 @@ const NavigationBar = () => {
         className="pr-3 flex items-center h-full w-max gap-x-3 float-right relative"
       >
         <a href="/blog.html" className="text-gray-50 dark:text-gray-800 font-black text-lg">Blog</a>
+        <ThemeToggle />
         <div
           ref={navigationMenu}
         >
