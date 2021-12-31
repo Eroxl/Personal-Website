@@ -24,7 +24,7 @@ const NavigationBar = () => {
   return (
     <div
       id="Navigation Bar"
-      className="bg-gray-800 dark:bg-gray-50 w-full h-16 z-50 fixed"
+      className="bg-gray-800 dark:bg-gray-50 w-full h-16 z-50 fixed transition-colors"
     >
       <a
         id="Logo Bar"
