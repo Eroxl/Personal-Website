@@ -10,7 +10,7 @@ const PostPage = (props: { data: any, content: any }) => {
   const { data, content } = props;
 
   return (
-    <div className="bg-gray-100 mx-10 pt-24 mainMarkdownContent font-bold">
+    <div className="bg-gray-100 dark:bg-gray-800 mx-10 pt-24 mainMarkdownContent font-bold">
       <Head>
         <title>{`Eroxl's Blog | ${data.title}`}</title>
         <meta name="description" content={data.description} />

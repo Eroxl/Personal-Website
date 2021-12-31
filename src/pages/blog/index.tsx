@@ -10,14 +10,14 @@ const BlogPage = (
   const { posts } = props;
 
   return (
-    <div className="bg-gray-100 px-10 pt-24">
-      <h1 className="font-bold text-gray-800">
+    <div className="bg-gray-100 dark:bg-gray-800 px-10 pt-24">
+      <h1 className="font-bold text-gray-800 dark:text-gray-50">
         <h1 className="sm:text-6xl text-5xl">Blog</h1>
         <h1 className="sm:text-2xl text-xl">
           Welcome to my blog where I can show off some of the stuff I am working on
         </h1>
       </h1>
-      <div className="font-bold text-gray-800">
+      <div className="font-bold text-gray-800 dark:text-gray-50">
         <div className="h-max flex gap-5 justify-evenly sm:justify-between flex-wrap mt-5 mx-5">
           {
             posts.map(
