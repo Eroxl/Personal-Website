@@ -1,10 +1,6 @@
 import React from 'react';
 
-const HelloMessage = (
-  props: { time: string },
-) => {
-  const { time } = props;
-
+const HelloMessage = () => {
   return (
     <div className="h-full">
       <div className="px-10 table w-full h-screen absolute top-0 left-0">
@@ -12,9 +8,6 @@ const HelloMessage = (
           <span>Hi, I&rsquo;m </span>
           <a href="https://github.com/Eroxl" title="Github" target="_blank" rel="noopener noreferrer" className="underline text-green-400">Eroxl</a>
           <br />
-          <span>I&rsquo;ve coded over </span>
-          <a href="https://wakatime.com/@Eroxl" title="Wakatime" target="_blank" rel="noopener noreferrer" className="underline text-cyan-400">{`${time} hours`}</a>
-          <span> since August 2021</span>
           <a href="#aboutMessage" className="absolute bottom-0 left-1/2 block -ml-6">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 

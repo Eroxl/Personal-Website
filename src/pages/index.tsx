@@ -18,7 +18,7 @@ const MainPage = (
   const { projectsJSON, contributionsJSON, time } = props;
   return (
     <div className="bg-gray-100 dark:bg-gray-800 h-full px-10">
-      <HelloMessage time={time} />
+      <HelloMessage />
       <Spacer id="aboutMessage" />
       <AboutMessage />
       <Spacer id="projects" />
@@ -36,13 +36,10 @@ export const getStaticProps: GetStaticProps = async () => {
   const projectsJSON = await getProjects();
   const contributionsJSON = await getContributions();
 
-  const time = '289';
-
   return {
     props: {
       projectsJSON,
       contributionsJSON,
-      time,
     },
   };
 };
