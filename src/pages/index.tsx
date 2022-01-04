@@ -12,10 +12,9 @@ const MainPage = (
   props: { 
     projectsJSON: any[],
     contributionsJSON: any[],
-    time: string,
  },
 ) => {
-  const { projectsJSON, contributionsJSON, time } = props;
+  const { projectsJSON, contributionsJSON } = props;
   return (
     <div className="bg-gray-100 dark:bg-gray-800 h-full px-10">
       <HelloMessage />
