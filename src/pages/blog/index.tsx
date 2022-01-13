@@ -26,7 +26,7 @@ const BlogPage = (
                   name={post.title}
                   key={post.title}
                   description={post.description}
-                  imageURL={post.imageURL}
+                  imageURLs={[post.imageURL]}
                   projectURL={`/blog/${post.name.replace(/\s/g, '-')}.html`.toLowerCase()}
                 />
               ),
