@@ -16,7 +16,7 @@ const ProjectsPage = (props: { projectsJSON: any[], name: string }) => {
                 name={project.name}
                 key={project.name}
                 description={project.description}
-                imageURL={project.imageURL}
+                imageURLs={project.imageURLs}
                 projectURL={project.homepage}
               />
             ),

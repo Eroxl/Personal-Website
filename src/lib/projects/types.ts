@@ -19,6 +19,6 @@ export interface formattedProjectTypes {
   name: string,
   description: string,
   homepage: string,
-  imageURL: string,
+  imageURLs: string[],
   contrib: boolean,
 }

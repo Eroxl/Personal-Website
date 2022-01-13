@@ -39,7 +39,7 @@ const getAllProjects = async (githubPersonalAccessTokens: githubAccessToken[]) =
               name: element.name,
               description: element.description,
               homepage: element.homepage !== '' ? element.homepage : element.html_url,
-              imageURL: icons[element.id],
+              imageURLs: icons[element.id],
               contrib: githubPersonalAccessToken.contrib,
             },
           );
@@ -52,7 +52,7 @@ const getAllProjects = async (githubPersonalAccessTokens: githubAccessToken[]) =
             name: projectJSON.name,
             description: projectJSON.description,
             homepage: projectJSON.homepage !== '' ? projectJSON.homepage : projectJSON.html_url,
-            imageURL: icons[projectJSON.id],
+            imageURLs: icons[projectJSON.id],
             contrib: githubPersonalAccessToken.contrib,
           },
         );
