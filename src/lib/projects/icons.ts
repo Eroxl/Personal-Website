@@ -10,7 +10,6 @@ const icons: { [key: string]: string[] } = {
   // ~ https://github.com/BC-Open-Legislature/Legislature-Site-Frontend
   418293606: [
     "https://raw.githubusercontent.com/BC-Open-Legislature/Legislature-Site-Frontend/main/images/Screenshots/Debates%20Page%20Updated.png",
-    "https://raw.githubusercontent.com/BC-Open-Legislature/Legislature-Site-Frontend/main/images/Screenshots/Debates%20Index%20Page.png",
     "https://raw.githubusercontent.com/BC-Open-Legislature/Legislature-Site-Frontend/main/images/Screenshots/Members%20Page.png",
   ],
   // ~ https://github.com/LiveTL/LiveTL/
