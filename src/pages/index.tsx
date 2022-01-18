@@ -11,10 +11,9 @@ import { getProjects, getContributions } from '../lib/projects/projects';
 const MainPage = (
   props: { 
     projectsJSON: any[],
-    contributionsJSON: any[],
  },
 ) => {
-  const { projectsJSON, contributionsJSON } = props;
+  const { projectsJSON } = props;
   return (
     <div className="bg-gray-100 dark:bg-gray-800 h-full px-10">
       <HelloMessage />
@@ -22,8 +21,6 @@ const MainPage = (
       <AboutMessage />
       <Spacer id="projects" />
       <ProjectsPage projectsJSON={projectsJSON} name="Projects" />
-      <Spacer id="contributions" />
-      <ProjectsPage projectsJSON={contributionsJSON} name="Contributions" />
       <Spacer id="work" />
       <WorkPage />
       <Spacer />
@@ -33,12 +30,10 @@ const MainPage = (
 
 export const getStaticProps: GetStaticProps = async () => {
   const projectsJSON = await getProjects();
-  const contributionsJSON = await getContributions();
 
   return {
     props: {
       projectsJSON,
-      contributionsJSON,
     },
   };
 };
