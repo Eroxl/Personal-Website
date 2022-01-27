@@ -2,9 +2,11 @@
   <img src="./images/Logo.png" height=200 />
 </p>
 
-<h1 align="center">
-Eroxl's Personal Website
-</h1>
+<a href="https://erox.one">
+  <h1 align="center">
+  Eroxl's Personal Website
+  </h1>
+</a>
 
 ## About
 This is my personal website to show off projects I've created and test out ideas I want to test.
