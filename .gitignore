@@ -1,14 +1,8 @@
-# -=- My Device Specfic Ignores -=- 
-**/Icon? 
-
 # -=- Mac OS Specific Ignores -=-
 **/.DS_Store
+**/Icon? 
 
-# -=- Secrets File -=-
-**/secrets.*
-
-# -=- Main Ignors -=-
+# -=- Main Ignores -=-
 **/.next
 /node_modules
 /src/src
-**/.obsidian

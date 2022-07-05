@@ -11,17 +11,6 @@
 ## About
 This is my personal website to show off projects I've created and test out ideas I want to test.
 
-## Features
-* Dynamically generated projects page
-  * All the projects are dynamically gathered from my github page
-
-## Screenshots
-#### The main landing page of the website
-![Main Page Screenshot](./images/Landing%20Page.png)
-
-#### The projects section of the website
-![Projects Page Screenshot](./images/Projects%20Page.png)
-
 ## Frameworks / Tools Used
 * Functionality
   * [React JS](https://reactjs.org/)
