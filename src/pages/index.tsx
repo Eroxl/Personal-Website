@@ -1,45 +1,11 @@
 import React from 'react';
 
-import TypingAnimation from '../components/terminalAnimation/TypingAnimation';
-import Animator from '../components/terminalAnimation/Animator';
+import WelcomeMessage from '../components/welcome/WelcomeMessage';
 
 const MainPage = () => (
-  <Animator
-    keyFrames={[
-      {
-        JSX: (
-          <TypingAnimation
-            text="Welcome to Eroxl's"
-            speed={100}
-            reversed={false}
-          />
-        ),
-        duration: 20 * 100,
-      },
-      {
-        JSX: (
-          <TypingAnimation
-            text=""
-            speed={100}
-            reversed
-          />
-        ),
-        duration: 8 * 100,
-        delay: 2 * 100,
-      },
-      {
-        JSX: (
-          <TypingAnimation
-            text="Welcome to Evan's personal website"
-            speed={100}
-            reversed={false}
-          />
-        ),
-        duration: 6 * 100,
-        delay: 1 * 100,
-      },
-    ]}
-  />
+  <div className="mx-20 mt-20">
+    <WelcomeMessage />
+  </div>
 );
 
 export default MainPage;

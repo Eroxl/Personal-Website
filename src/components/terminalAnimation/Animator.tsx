@@ -28,9 +28,9 @@ const Animator: React.FC<AnimatorProps> = (props) => {
   });
 
   return (
-    <div>
+    <span>
       {keyFrames[currentFrame].JSX}
-    </div>
+    </span>
   );
 };
 

@@ -30,12 +30,12 @@ const TypingAnimation: React.FC<TypingAnimationProps> = (props) => {
   });
 
   return (
-    <div>
+    <span>
       {currentText}
       <span className={currentText === text ? 'animate-blink' : ''}>
         _
       </span>
-    </div>
+    </span>
   );
 };
 
