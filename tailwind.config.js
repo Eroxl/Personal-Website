@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
   purge: [
     './src/**/*.{js,ts,jsx,tsx}',
@@ -7,27 +5,19 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {
-        gray: colors.neutral,
-        green: colors.green,
-        cyan: colors.cyan,
-        violet: colors.violet,
-      },
       animation: {
-        projects: 'projects 5s ease infinite',
+        blink: 'blink 0.8s infinite',
       },
       keyframes: {
-        bounce: {
-          '0%, 100%': {
-            transform: 'translateY(-20%)',
+        blink: {
+          '0%': {
+            opacity: 1,
           },
           '50%': {
-            transform: 'translateY(0)',
+            opacity: 0,
           },
-        },
-        projects: {
-          '0%, 100%': {
-            transform: 'scale(1.03)',
+          '100%': {
+            opacity: 1,
           },
         },
       },
