@@ -5,22 +5,27 @@ import TypingAnimation from './TypingAnimation';
 
 interface SwapTypeAnimationProps {
   texts: string[];
+  delay: number;
 }
 
 const SwapTypeAnimation: React.FC<SwapTypeAnimationProps> = (props) => {
-  const { texts } = props;
+  const { texts, delay } = props;
 
   const [currentText, setCurrentText] = useState(texts[0]);
 
-  const handleTextChange = () => {
-    const index = texts.indexOf(currentText);
-    const nextIndex = (index + 1) % texts.length;
-    setCurrentText(texts[nextIndex]);
+  const getNextIndex = (): number => {
+    const nextIndex = Math.floor(Math.random() * texts.length);
+
+    if (nextIndex === texts.indexOf(currentText)) {
+      return getNextIndex();
+    }
+
+    return nextIndex;
   };
 
   useEffect(() => {
     const interval = setInterval(
-      handleTextChange,
+      () => { setCurrentText(texts[getNextIndex()]); },
       (currentText.length * 2 + 6) * 100,
     );
 
@@ -49,7 +54,7 @@ const SwapTypeAnimation: React.FC<SwapTypeAnimationProps> = (props) => {
             />
           ),
           duration: currentText.length * 100,
-          delay: 4 * 100,
+          delay,
         },
       ]}
       key={currentText}
