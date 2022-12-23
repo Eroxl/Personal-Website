@@ -1,76 +1,41 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
 
-import icons from './icons';
-import secrets from './secrets';
-import { formattedProjectTypes, githubAccessToken, projectType } from './types';
+import { formattedProjectTypes } from './types';
 
-const getAllProjects = async (githubPersonalAccessTokens: githubAccessToken[]) => {
-  const outputRepos: formattedProjectTypes[] = [];
+const projects = [
+  {
+    name: 'BC Open Legislature',
+    description: "Keeping tabs on BC's Legislature | Built using NextJS and Typescript | Based on https://openparliament.ca",
+    homepage: 'https://github.com/BC-Open-Legislature/Legislature-Site',
+    imageURLs: ['https://raw.githubusercontent.com/BC-Open-Legislature/Legislature-Site-Frontend/main/images/Screenshots/Debates%20Page%20Updated.png'],
+    contrib: false,
+  },
+  {
+    name: 'Note Rack',
+    description: 'A simple note taking app built using Electron and React',
+    homepage: 'https://github.com/eroxl/Note-Rack',
+    imageURLs: [
+      'https://raw.githubusercontent.com/Eroxl/Note-Rack/main/images/Desktop_Current_State_Dark.png',
+      'https://github.com/Eroxl/Note-Rack/raw/main/images/Desktop_Current_State.png'
+    ],
+    contrib: false,
+  },
+  {
+    name: 'Personal Website',
+    description: 'My personal website for sharing my projects as well as testing things out using Next JS and Typescript.',
+    homepage: 'https://github.com/Eroxl/Personal-Website',
+    imageURLs: ['https://repository-images.githubusercontent.com/425653836/781f96f2-4a25-4eb9-86df-93376136428a'],
+    contrib: false,
+  },
+];
 
-  for (const githubPersonalAccessToken of githubPersonalAccessTokens) {
-    let url;
-
-    const tokenType = githubPersonalAccessToken.type;
-    if (tokenType === 'personal') {
-      url = 'https://api.github.com/user/repos';
-    } else if (tokenType === 'org') {
-      url = `https://api.github.com/orgs/${githubPersonalAccessToken.name}/repos`;
-    } else {
-      url = `https://api.github.com/repos/${githubPersonalAccessToken.name}/${githubPersonalAccessToken.key}`;
-    }
-
-    const projectData = tokenType !== 'repo'
-      ? await axios.get(url, {
-        headers: {
-          Authorization: `token ${githubPersonalAccessToken.key}`,
-        },
-      })
-      : await axios.get(url);
-
-    const projectJSON = projectData.data;
-
-
-    if (tokenType !== 'repo') {
-      projectJSON.forEach((element: projectType) => {
-        if (icons[element.id] !== undefined) {
-          outputRepos.push(
-            {
-              name: element.name,
-              description: element.description,
-              homepage: element.homepage !== '' ? element.homepage : element.html_url,
-              imageURLs: icons[element.id],
-              contrib: githubPersonalAccessToken.contrib,
-            },
-          );
-        }
-      });
-    } else {
-      if (icons[projectJSON.id] !== undefined) {
-        outputRepos.push(
-          {
-            name: projectJSON.name,
-            description: projectJSON.description,
-            homepage: projectJSON.homepage !== '' ? projectJSON.homepage : projectJSON.html_url,
-            imageURLs: icons[projectJSON.id],
-            contrib: githubPersonalAccessToken.contrib,
-          },
-        );
-      }
-    }
-  }
-
-  return outputRepos;
+const getContributions = (): formattedProjectTypes[] => {
+  return projects.filter((project) => project.contrib);
 };
 
-const getContributions = async () => {
-  const projects = await getAllProjects(secrets.githubPersonalAccessTokens.filter((project) => project.contrib));
-  return (projects);
-};
-
-const getProjects = async () => {
-  const projects = await getAllProjects(secrets.githubPersonalAccessTokens.filter((project) => !project.contrib));
-  return (projects);
+const getProjects = (): formattedProjectTypes[] => {
+  return projects.filter((project) => !project.contrib);
 };
 
 

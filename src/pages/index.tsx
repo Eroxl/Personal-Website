@@ -6,7 +6,7 @@ import AboutMessage from '../components/home/AboutMessage';
 import ProjectsPage from '../components/home/Projects';
 import WorkPage from '../components/home/WorkPage';
 import Spacer from '../components/home/Spacer';
-import { getProjects, getContributions } from '../lib/projects/projects';
+import { getProjects } from '../lib/projects/projects';
 
 const MainPage = (
   props: { 
@@ -15,7 +15,7 @@ const MainPage = (
 ) => {
   const { projectsJSON } = props;
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 h-full px-10">
+    <div className="h-full px-10 bg-gray-100 dark:bg-gray-800">
       <HelloMessage />
       <Spacer id="aboutMessage" />
       <AboutMessage />
@@ -29,7 +29,7 @@ const MainPage = (
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projectsJSON = await getProjects();
+  const projectsJSON = getProjects();
 
   return {
     props: {

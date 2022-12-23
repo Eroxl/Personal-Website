@@ -16,27 +16,41 @@ const ProjectsPortion = (props: Props) => {
     imageURLs,
     projectURL,
   } = props;
-  const [ currentImageURL, setCurrentImageURL ] = useState(imageURLs[0]);
+  const [ currentImageIndex, setCurrentImageIndex ] = useState(0);
+  const [ altImageIndex, setAltImageIndex ] = useState(0);
+  const [ altImageOpacity, setAltImageOpacity ] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const currentIndex = imageURLs.indexOf(currentImageURL);
-      const futureIndex = currentIndex < imageURLs.length - 1 ? currentIndex + 1 : 0;
-      setCurrentImageURL(imageURLs[futureIndex]);
+      const futureIndex = currentImageIndex < imageURLs.length - 1 ? currentImageIndex + 1 : 0;
+      setCurrentImageIndex(futureIndex);
+      setAltImageIndex(currentImageIndex);
+
+      setAltImageOpacity(100);
     }, 5000);
     return () => clearTimeout(timer);
-  }, [currentImageURL, imageURLs]);
+  }, [currentImageIndex, altImageOpacity, altImageIndex, imageURLs]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (altImageOpacity > 0) {
+        setAltImageOpacity(altImageOpacity - 5);
+      }
+    }, 10);
+    return () => clearTimeout(timer);
+  }, [altImageOpacity]);
 
   return (
     <a
       href={projectURL}
-      className="w-full lg:w-5/12 h-auto bg-gray-800 dark:bg-gray-50 rounded sm:p-5 p-3 text-gray-50 dark:text-gray-800 hover:animate-projects group transition-colors"
+      className="w-full h-auto p-3 transition-colors bg-gray-800 rounded lg:w-5/12 dark:bg-gray-50 sm:p-5 text-gray-50 dark:text-gray-800 hover:animate-projects group"
       title="Open Website In New Tab"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="pb-2s">
-        <img src={currentImageURL} className="rounded-sm object-cover aspect-video" alt={`Projects Tab For ${name}`} />
+      <div className="relative pb-2s">
+        <img src={imageURLs[currentImageIndex]} className={`elative object-cover rounded-sm aspect-video`} alt={`Projects Tab For ${name}`} />
+        <img src={imageURLs[altImageIndex]} style={{opacity: altImageOpacity / 100}} className={`z-10 absolute top-0 object-cover rounded-sm aspect-video`} alt={`Projects Tab Fade For ${name}`} />
       </div>
       <h1 className="text-xl group-hover:underline">{name.replace(new RegExp('-', 'g'), ' ')}</h1>
       <h1 className="text-sm">{description}</h1>
