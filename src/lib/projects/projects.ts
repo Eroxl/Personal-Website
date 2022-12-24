@@ -13,7 +13,7 @@ const projects = [
   },
   {
     name: 'Note Rack',
-    description: 'A simple note taking app built using Electron and React',
+    description: 'An fullstack inline WYSIWYG markdown editor built for students to manage school work. | Built using NextJS, ExpressJS, and Typescript.',
     homepage: 'https://github.com/eroxl/Note-Rack',
     imageURLs: [
       'https://raw.githubusercontent.com/Eroxl/Note-Rack/main/images/Desktop_Current_State_Dark.png',
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: 'Personal Website',
-    description: 'My personal website for sharing my projects as well as testing things out using Next JS and Typescript.',
+    description: 'My personal website for sharing my projects. | Built using NextJS and Typescript.',
     homepage: 'https://github.com/Eroxl/Personal-Website',
     imageURLs: ['https://repository-images.githubusercontent.com/425653836/781f96f2-4a25-4eb9-86df-93376136428a'],
     contrib: false,
