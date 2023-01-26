@@ -15,10 +15,7 @@ const projects = [
     name: 'Note Rack',
     description: 'An fullstack inline WYSIWYG markdown editor built for students to manage school work. | Built using NextJS, ExpressJS, and Typescript.',
     homepage: 'https://github.com/eroxl/Note-Rack',
-    imageURLs: [
-      'https://raw.githubusercontent.com/Eroxl/Note-Rack/main/images/Desktop_Current_State_Dark.png',
-      'https://github.com/Eroxl/Note-Rack/raw/main/images/Desktop_Current_State.png'
-    ],
+    imageURLs: ['https://raw.githubusercontent.com/Eroxl/Note-Rack/main/images/Desktop_Current_State_Dark.png'],
     contrib: false,
   },
   {
