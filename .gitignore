@@ -3,3 +3,7 @@
 
 # -=- Mac OS Specific Ignores -=-
 **/.DS_Store
+
+# -=- Build Directory Ignores -=-
+dist/
+node_modules/
