@@ -3,12 +3,3 @@
 
 # -=- Mac OS Specific Ignores -=-
 **/.DS_Store
-
-# -=- Secrets File -=-
-**/secrets.*
-
-# -=- Main Ignors -=-
-**/.next
-/node_modules
-/src/src
-**/.obsidian
