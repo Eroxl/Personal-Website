@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+:root {
+  /* Nord Polar Night */
+  --nord0: #2E3440;
+  --nord1: #3B4252;
+  --nord2: #434C5E;
+  --nord3: #4C566A;
+
+  /* Nord Snow Storm */
+  --nord4: #D8DEE9;
+  --nord5: #E5E9F0;
+  --nord6: #ECEFF4;
+
+  /* Nord Frost */
+  --nord7: #8FBCBB;
+  --nord8: #88C0D0;
+  --nord9: #81A1C1;
+  --nord10: #5E81AC;
+
+  /* Nord Aurora */
+  --nord11: #BF616A;
+  --nord12: #D08770;
+  --nord13: #EBCB8B;
+  --nord14: #A3BE8C;
+  --nord15: #B48EAD;
+}
+
+@theme inline {
+  --color-nord0: var(--nord0);
+  --color-nord1: var(--nord1);
+  --color-nord2: var(--nord2);
+  --color-nord3: var(--nord3);
+  --color-nord4: var(--nord4);
+  --color-nord5: var(--nord5);
+  --color-nord6: var(--nord6);
+  --color-nord7: var(--nord7);
+  --color-nord8: var(--nord8);
+  --color-nord9: var(--nord9);
+  --color-nord10: var(--nord10);
+  --color-nord11: var(--nord11);
+  --color-nord12: var(--nord12);
+  --color-nord13: var(--nord13);
+  --color-nord14: var(--nord14);
+  --color-nord15: var(--nord15);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html, body, * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+body {
+  background-color: #3a7d44;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: var(--nord6);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Blog prose styling */
+.prose-nord {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--nord4);
+}
+
+.prose-nord h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nord6);
+}
+
+.prose-nord h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nord6);
+}
+
+.prose-nord p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-nord a {
+  color: var(--nord8);
+  transition: color 0.15s;
+}
+
+.prose-nord a:hover {
+  color: var(--nord7);
+}
+
+.prose-nord strong {
+  color: var(--nord6);
+  font-weight: 600;
+}
+
+/* Inline code */
+.prose-nord code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875em;
+  color: #35A77C;
+  background: #fdf6e3;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Code blocks (rehype-pretty-code) */
+.prose-nord figure[data-rehype-pretty-code-figure] {
+  margin: 1.5rem 0;
+}
+
+.prose-nord pre {
+  margin: 0;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.prose-nord pre code {
+  background: none;
+  padding: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: inherit;
+}
+
+.prose-nord pre [data-line] {
+  padding: 0 0.25rem;
+}
+
+/* Inline code inside a pre should not get the inline styles */
+.prose-nord pre > code {
+  border-radius: 0;
+}
+
+.prose-nord ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.prose-nord ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.prose-nord li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-nord blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid white;
+  font-style: italic;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scenery-wrapper {
+  container-type: size;
+}
+
+@container (max-width: 400px) {
+  .scenery {
+    height: 0;
+    width: 0;
+  }
+}
+
+@container (max-height: 200px) {
+  .scenery {
+    height: 0;
+    width: 0;
+  }
+}
+
+.scenery {
+  position: absolute;
+  left: clamp(10%, clamp(50px, var(--offset-left), calc(100% - 50px)), 90%);
+  top: clamp(10%, clamp(50px, var(--offset-top), calc(100% - 50px)), 90%);
+}

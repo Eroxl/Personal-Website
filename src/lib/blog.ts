@@ -1,38 +1,73 @@
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
-import { marked } from 'marked';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import GithubSlugger from "github-slugger";
 
-const blogPostsDirectory = join(process.cwd(), 'src/_blog');
+const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
 
-export const getBlogPostByName = (name: string) => {
-  const path = join(blogPostsDirectory, `${name.replace(/-/g, ' ')}.md`);
-  const markdownData = fs.readFileSync(path, 'utf8');
-  const { data, content } = matter(markdownData);
+export interface BlogHeading {
+  id: string;
+  label: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  tags: string[];
+  content: string;
+  headings: BlogHeading[];
+}
+
+function extractHeadings(content: string): BlogHeading[] {
+  const slugger = new GithubSlugger();
+  const matches = content.matchAll(/^## (.+)$/gm);
+  return Array.from(matches, ([, text]) => ({
+    id: slugger.slug(text),
+    label: text,
+  }));
+}
+
+export function getAllPosts(): BlogPost[] {
+  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"));
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace(/\.md$/, "");
+    const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf-8");
+    const { data, content } = matter(raw);
+
+    return {
+      slug,
+      title: data.title,
+      description: data.description,
+      date: data.date,
+      tags: data.tags ?? [],
+      content,
+      headings: extractHeadings(content),
+    } satisfies BlogPost;
+  });
+
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  const filePath = path.join(BLOG_DIR, `${slug}.md`);
+
+  if (!fs.existsSync(filePath)) return undefined;
+
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
 
   return {
-    data: {
-      ...data,
-      name,
-      ISODate: new Date(data.date).toISOString(),
-      date: data.date,
-    },
+    slug,
+    title: data.title,
+    description: data.description,
+    date: data.date,
+    tags: data.tags ?? [],
     content,
+    headings: extractHeadings(content),
   };
-};
-
-export const getAllBlogPosts = () => {
-  const posts = fs.readdirSync(blogPostsDirectory);
-  // Date Formatted Like yyyy.mm.dd
-  const allPosts = posts
-    .filter((post) => post !== '.obsidian')
-    .map((post) => getBlogPostByName(post.replace('.md', '')).data)
-    .sort(
-      (firstPost, secondPost) => (
-        new Date(firstPost.date).getTime() > new Date(secondPost.date).getTime() ? -1 : 1
-      ),
-    );
-  return allPosts;
-};
-
-export const formatToMarkdown = (formatableString: string) => marked.parse(formatableString);
+}
