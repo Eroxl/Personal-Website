@@ -50,19 +50,24 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`overflow-hidden border-b border-white/15 transition-all duration-300 ease-in-out sm:hidden ${open ? "max-h-60" : "max-h-0 -translate-y-full"}`}>
-        <nav className="flex flex-col gap-4 bg-[#3a7d44] px-6 pb-6">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="font-mono text-sm text-nord6/80 transition-colors hover:text-nord6"
-              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            >
-              {link.label}
-            </Link>
-          ))}
+      <div
+        className="grid border-b border-white/15 transition-[grid-template-rows] duration-300 ease-in-out sm:hidden"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <nav className="flex flex-col gap-4 overflow-hidden bg-[#3a7d44] px-6">
+          <div className={`flex flex-col gap-4 pb-6 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="font-mono text-sm text-nord6/80 transition-colors hover:text-nord6"
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </nav>
       </div>
     </header>

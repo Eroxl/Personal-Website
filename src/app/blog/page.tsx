@@ -18,15 +18,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="px-6">
-      <SceneryWrapper className="h-24 min-h-24 pt-12" noMinScreen variant="bottom" offset={942} quantity={{
-        bottom: 5,
-        left: 2,
-        right: 2,
-        top: 2,
-      }}>
-        <div />
-      </SceneryWrapper>
+    <div className="px-6 pt-32">
       <SceneryWrapper variant="bottom" offset={92985} quantity={{
         bottom: 3,
         left: posts.length * 2,

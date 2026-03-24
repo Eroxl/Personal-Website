@@ -180,24 +180,24 @@ body {
 }
 
 .scenery-wrapper {
-  container-type: size;
+  container-type: inline-size;
 }
 
 @container (max-width: 400px) {
-  .scenery {
+  .scenery-w {
     height: 0;
     width: 0;
   }
 }
 
 @container (max-height: 200px) {
-  .scenery {
+  .scenery-h {
     height: 0;
     width: 0;
   }
 }
 
-.scenery {
+.scenery-h, .scenery-w {
   position: absolute;
   left: clamp(10%, clamp(50px, var(--offset-left), calc(100% - 50px)), 90%);
   top: clamp(10%, clamp(50px, var(--offset-top), calc(100% - 50px)), 90%);

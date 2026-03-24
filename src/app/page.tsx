@@ -88,7 +88,7 @@ export default function Home() {
         id="about"
         className="flex min-h-screen items-center justify-center px-6"
       >
-        <SceneryWrapper variant="full" offset={12252}>
+        <SceneryWrapper variant="full" offset={12243} className="min-h-0!">
         <div className="max-w-2xl" data-is-bounding="true">
           <h2 className="mb-6 font-mono text-sm tracking-wide text-nord13">
             About
@@ -194,7 +194,7 @@ export default function Home() {
         id="projects"
         className="px-6"
       >
-        <SceneryWrapper variant="full" offset={1084}>
+        <SceneryWrapper variant="full" offset={1086}>
           <div className="mx-auto max-w-5xl" data-is-bounding="true">
             <h2 className="mb-20 font-mono text-sm tracking-wide text-nord13">
               Projects

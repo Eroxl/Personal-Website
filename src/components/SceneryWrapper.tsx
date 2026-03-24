@@ -38,14 +38,14 @@ const getRandomWeightedImage = (seedOffset: number) => {
     return "/scenery/rock.png";
 }
 
-const Scenery = ({ quantity, offset }: { quantity: number; offset: number }) => {
+const Scenery = ({ quantity, offset, variant }: { quantity: number; offset: number; variant: "h" | "w" }) => {
     return (
         <>
             {Array.from({ length: quantity }).map((_, i) => (
                 <img
                     key={i}
                     src={getRandomWeightedImage(i + offset)}
-                    className="w-6 h-6 absolute scenery"
+                    className={`w-6 h-6 absolute scenery-${variant}`}
                     style={{
                         "--offset-left": `${seededRandom(i + offset) * 100}%`,
                         "--offset-top": `${seededRandom(i + offset + 1000) * 100}%`,
@@ -59,26 +59,26 @@ const Scenery = ({ quantity, offset }: { quantity: number; offset: number }) => 
 
 export default function SceneryWrapper({ children, variant, quantity, offset, className, noMinScreen }: SceneryWrapperProps) {
     return (
-        <div className={`relative flex ${noMinScreen || "min-h-screen"} w-full gap-4 ${className || ""}`}>
+        <div className={`relative flex ${noMinScreen || "min-h-screen"} w-full gap-4 scenery-wrapper ${className || ""}`}>
             {/* Left */}
             <div className="sm:flex flex-col gap-4 flex-1 min-w-0 relative hidden">
-                {quantity?.left !== 0 && <Scenery quantity={quantity?.left ?? DEFAULT_QUANTITY.left} offset={offset} />}
+                {quantity?.left !== 0 && <Scenery quantity={quantity?.left ?? DEFAULT_QUANTITY.left} offset={offset} variant="w" />}
             </div>
 
             {/* Center */}
             <div className="flex flex-col gap-4 flex-2 min-w-0 relative">
-                {variant === "full" && <div className="flex-1 relative scenery-wrapper overflow-visible">
-                    {quantity?.top !== 0 && <Scenery quantity={quantity?.top ?? DEFAULT_QUANTITY.top} offset={offset + 12} />}  
+                {variant === "full" && <div className="flex-1 min-h-55 relative scenery-wrapper overflow-visible">
+                    {quantity?.top !== 0 && <Scenery quantity={quantity?.top ?? DEFAULT_QUANTITY.top} offset={offset + 12} variant="h" />}
                 </div>}
                 <div className="flex-2 justify-center items-center flex flex-col">{children}</div>
-                <div className="flex-1 relative scenery-wrapper sm:visible overflow-visible">
-                    {quantity?.bottom !== 0 && <Scenery quantity={quantity?.bottom ?? DEFAULT_QUANTITY.bottom} offset={offset + 613} />}
+                <div className="flex-1 min-h-55 relative scenery-wrapper overflow-visible">
+                    {quantity?.bottom !== 0 && <Scenery quantity={quantity?.bottom ?? DEFAULT_QUANTITY.bottom} offset={offset + 613} variant="h" />}
                 </div>
             </div>
 
             {/* Right */}
             <div className="sm:flex flex-col gap-4 flex-1 min-w-0 relative hidden">
-                {quantity?.right !== 0 && <Scenery quantity={quantity?.right ?? DEFAULT_QUANTITY.right} offset={offset + 1235} />}
+                {quantity?.right !== 0 && <Scenery quantity={quantity?.right ?? DEFAULT_QUANTITY.right} offset={offset + 1235} variant="w" />}
             </div>
         </div>
     );
