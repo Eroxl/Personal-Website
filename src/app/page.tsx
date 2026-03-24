@@ -51,11 +51,11 @@ export default function Home() {
               Hey, I&apos;m
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-white sm:text-6xl">
               Evan.
             </h1>
 
-            <h2 className="mt-2 text-3xl font-semibold leading-snug text-white/60 sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-semibold leading-snug text-white/60 sm:text-4xl">
               Fullstack Developer.
             </h2>
 
@@ -226,7 +226,7 @@ export default function Home() {
             Contact
           </h2>
 
-          <h3 className="text-4xl font-bold text-white">
+          <h3 className="text-3xl font-bold text-white sm:text-4xl">
             Get In Touch
           </h3>
 

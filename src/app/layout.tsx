@@ -59,7 +59,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col text-nord6 no-scrollbar">
         <Header />
-        <main className="flex flex-1 flex-col no-scrollbar overflow-y-scroll">{children}</main>
+        <main className="flex flex-1 flex-col no-scrollbar overflow-y-scroll overflow-x-hidden">{children}</main>
       </body>
     </html>
   );

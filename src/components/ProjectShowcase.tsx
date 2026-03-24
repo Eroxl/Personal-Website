@@ -16,7 +16,7 @@ interface ProjectShowcaseProps {
 
 export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
   return (
-    <div className="flex flex-col gap-40">
+    <div className="flex flex-col gap-20 sm:gap-40">
       {projects.map((project, index) => {
         const isReversed = index % 2 !== 0;
 

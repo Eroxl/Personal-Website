@@ -159,7 +159,7 @@ const PROJECTS: TimelineProject[] = [
 
 export default function ProjectsPage() {
   return (
-    <div className="px-6 py-32">
+    <div className="px-4 py-24 sm:px-6 sm:py-32 overflow-x-hidden">
       <div className="mx-auto max-w-5xl">
         <h1 className="mb-4 font-mono text-sm tracking-wide text-nord13">
           Projects
@@ -174,7 +174,7 @@ export default function ProjectsPage() {
           {/* Timeline line */}
           <div className="absolute left-4 top-0 bottom-0 w-px bg-white/50 sm:left-1/2" />
 
-          <div className="flex flex-col gap-32">
+          <div className="flex flex-col gap-20 sm:gap-32">
             {PROJECTS.map((project, index) => {
               const isRight = index % 2 !== 0;
 

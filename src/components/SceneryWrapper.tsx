@@ -59,9 +59,9 @@ const Scenery = ({ quantity, offset }: { quantity: number; offset: number }) => 
 
 export default function SceneryWrapper({ children, variant, quantity, offset, className, noMinScreen }: SceneryWrapperProps) {
     return (
-        <div className={`relative flex ${noMinScreen || "min-h-screen"} w-screen gap-4 ${className || ""}`}>
+        <div className={`relative flex ${noMinScreen || "min-h-screen"} w-full gap-4 ${className || ""}`}>
             {/* Left */}
-            <div className="flex flex-col gap-4 flex-1 min-w-0 relative">
+            <div className="sm:flex flex-col gap-4 flex-1 min-w-0 relative hidden">
                 {quantity?.left !== 0 && <Scenery quantity={quantity?.left ?? DEFAULT_QUANTITY.left} offset={offset} />}
             </div>
 
@@ -71,13 +71,13 @@ export default function SceneryWrapper({ children, variant, quantity, offset, cl
                     {quantity?.top !== 0 && <Scenery quantity={quantity?.top ?? DEFAULT_QUANTITY.top} offset={offset + 12} />}  
                 </div>}
                 <div className="flex-2 justify-center items-center flex flex-col">{children}</div>
-                <div className="flex-1 relative scenery-wrapper overflow-visible">
+                <div className="flex-1 relative scenery-wrapper sm:visible overflow-visible">
                     {quantity?.bottom !== 0 && <Scenery quantity={quantity?.bottom ?? DEFAULT_QUANTITY.bottom} offset={offset + 613} />}
                 </div>
             </div>
 
             {/* Right */}
-            <div className="flex flex-col gap-4 flex-1 min-w-0 relative">
+            <div className="sm:flex flex-col gap-4 flex-1 min-w-0 relative hidden">
                 {quantity?.right !== 0 && <Scenery quantity={quantity?.right ?? DEFAULT_QUANTITY.right} offset={offset + 1235} />}
             </div>
         </div>

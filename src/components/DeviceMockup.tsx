@@ -19,7 +19,7 @@ export default function DeviceGroup({
 }: DeviceGroupProps) {
   if (variant === "browser") {
     return (
-      <div className="w-85 sm:w-105">
+      <div className="w-full max-w-85 sm:max-w-105">
         <div className="rounded-lg border border-white/20 bg-black/20 shadow-xl overflow-hidden">
           {/* Title bar */}
           <div className="flex items-center gap-1.5 border-b border-white/20 px-3 py-2">
@@ -28,7 +28,7 @@ export default function DeviceGroup({
             <div className="h-2 w-2 rounded-full bg-nord14" />
           </div>
 
-          <div className="h-48 overflow-hidden bg-black/30 sm:h-56">
+          <div className="aspect-2/1 overflow-hidden bg-black/30 sm:h-56 sm:aspect-auto">
             <Image
               src={ipadSrc}
               alt={ipadAlt}
@@ -45,11 +45,11 @@ export default function DeviceGroup({
   return (
     <div className="relative">
       {/* iPad */}
-      <div className="w-85 sm:w-105">
+      <div className="w-full max-w-85 sm:max-w-105">
         <div className="rounded-[20px] border-[6px] border-white/20 bg-black/20 p-2 shadow-xl">
           <div className="absolute left-1/2 top-4 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-white/20" />
 
-          <div className="h-60 overflow-hidden rounded-xl bg-black/30 sm:h-72">
+          <div className="aspect-video overflow-hidden rounded-xl bg-black/30 sm:h-72 sm:aspect-auto">
             <Image
               src={ipadSrc}
               alt={ipadAlt}
