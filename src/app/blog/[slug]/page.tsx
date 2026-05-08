@@ -63,7 +63,7 @@ export default async function BlogPostPage({
         bottom: 3,
         right: 20,
       }}>
-        <div className="px-6 py-32">
+        <div className="px-6 pb-32">
           <div className="mx-auto max-w-2xl">
             <Link
               href="/blog"
